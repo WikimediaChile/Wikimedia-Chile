@@ -15,14 +15,7 @@
             -moz-osx-font-smoothing: grayscale;
             background-color: #ffffff; 
         }
-        #hero-section {
-            background-image: url('/background.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        .hero-overlay {
-            background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
-        }
+        /* ESTILOS DE HEADER UNIFICADOS */
         #main-header {
             transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
             color: #4B5563;
@@ -60,6 +53,7 @@
             background-color: #4a3f9a;
             border-color: #4a3f9a;
         }
+        /* Estado Scrolled (ahora permanente en todas las páginas) */
         #main-header.header-scrolled {
             background-color: #ffffff; 
             color: #4B5563;
@@ -93,6 +87,7 @@
             background-color: #4a3f9a;
             border-color: #4a3f9a;
         }
+        
         .ornament-card {
             position: relative;
             overflow: hidden;
@@ -111,24 +106,27 @@
             opacity: 0.15;
             z-index: 1;
         }
+        
+        /* FONDOS DE SECCIÓN TRANSPARENTES (UNIFICADOS) */
         .section-bg-ornament-circles {
             background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23e5e7eb' stroke-width='1'%3E%3Ccircle cx='50' cy='50' r='48' /%3E%3Ccircle cx='50' cy='50' r='38' /%3E%3Ccircle cx='50' cy='50' r='28' /%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23f3f4f6' stroke-width='1'%3E%3Ccircle cx='50' cy='50' r='48' /%3E%3Ccircle cx='50' cy='50' r='38' /%3E%3Ccircle cx='50' cy='50' r='28' /%3E%3C/g%3E%3C/svg%3E");
             background-size: 250px 250px;
             background-position: center top;
         }
         .section-bg-ornament-stars {
-            background-color: #f9f9f0;
-            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23e9e7c4' stroke-width='1'%3E%3Cpath d='M50 0 V20 M50 100 V80 M0 50 H20 M100 50 H80 M35.857 35.857 L42.928 42.928 M64.143 64.143 L57.072 57.072 M35.857 64.143 L42.928 57.072 M64.143 35.857 L57.072 42.928' /%3E%3C/g%3E%3C/svg%3E");
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23f3f4f6' stroke-width='1'%3E%3Cpath d='M50 0 V20 M50 100 V80 M0 50 H20 M100 50 H80 M35.857 35.857 L42.928 42.928 M64.143 64.143 L57.072 57.072 M35.857 64.143 L42.928 57.072 M64.143 35.857 L57.072 42.928' /%3E%3C/g%3E%3C/svg%3E");
             background-size: 200px 200px;
             background-position: center top;
         }
         .section-bg-ornament-dots {
             background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.6'%3E%3Ccircle cx='50' cy='50' r='5' /%3E%3Ccircle cx='35' cy='35' r='5' /%3E%3Ccircle cx='65' cy='35' r='5' /%3E%3Ccircle cx='35' cy='65' r='5' /%3E%3Ccircle cx='65' cy='65' r='5' /%3E%3Ccircle cx='50' cy='20' r='5' /%3E%3Ccircle cx='50' cy='80' r='5' /%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.3'%3E%3Ccircle cx='50' cy='50' r='5' /%3E%3Ccircle cx='35' cy='35' r='5' /%3E%3Ccircle cx='65' cy='35' r='5' /%3E%3Ccircle cx='35' cy='65' r='5' /%3E%3Ccircle cx='65' cy='65' r='5' /%3E%3Ccircle cx='50' cy='20' r='5' /%3E%3Ccircle cx='50' cy='80' r='5' /%3E%3C/g%3E%3C/svg%3E");
             background-size: 150px 150px;
             background-position: center 20px;
         }
+        
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-100%); }
@@ -198,7 +196,7 @@
         </nav>
         
         <!-- Menú Móvil -->
-        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-50 p-6">
+        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-50 p-6" style="background-color: white;">
             <div class="flex justify-between items-center mb-8">
                 <img src="/wikiemdia foundation logo.webp" 
                      alt="Wikimedia Chile Logo" 
@@ -243,28 +241,11 @@
     
     <main>
         
-        <!-- Sección Héroe -->
-        <section id="hero-section" class="relative h-[75vh] min-h-[550px] flex items-center justify-center text-white text-center">
-            <div class="absolute inset-0 hero-overlay"></div>
-            
-            <div class="container mx-auto px-4 lg:px-6 relative z-10">
-                <div class="max-w-4xl mx-auto">
-                    <h1 class="text-4xl sm:text-5xl font-extrabold !leading-tight tracking-tight drop-shadow-xl">
-                        Construyendo un mundo donde el <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-400">conocimiento</span> es libre para todos.
-                    </h1>
-                    <p class="mt-6 text-lg text-gray-200 max-w-3xl mx-auto drop-shadow-lg">
-                        Somos el capítulo local de la Fundación Wikimedia, promoviendo el conocimiento libre y la cultura abierta en Chile.
-                    </p>
-                    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="programas.html" class="w-full sm:w-auto text-white font-semibold rounded-lg text-base px-6 py-3 transition-all" style="background-color: #5748b5; hover:background-color: #4a3f9a;">
-                            Conoce nuestros programas
-                        </a>
-                        <a href="sobre-nosotros.html" class="w-full sm:w-auto bg-transparent border-2 border-white text-white font-semibold rounded-lg text-base px-6 py-3 transition-all hover:bg-white/10">
-                            Más sobre nosotros
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <!-- CAMBIO: Sección Héroe Reemplazada por Banner Simple -->
+        <section class="relative pt-20 h-[400px] md:h-[450px] flex items-center justify-center text-white overflow-hidden bg-gray-100">
+            <img src="banner.png" 
+                 alt="Comunidad de Wikimedia trabajando junta" 
+                 class="w-full h-full object-cover object-center">
         </section>
         
         <!-- === INICIO: Separador Visual Detallado === -->
@@ -284,6 +265,7 @@
         <!-- === FIN: Separador Visual Detallado === -->
 
         <!-- Sección "Forma parte del movimiento" -->
+        <!-- CAMBIO: Fondo actualizado a la versión más clara -->
         <section class="py-12 md:py-16 section-bg-ornament-circles">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="text-center mb-10 max-w-3xl mx-auto">
@@ -339,12 +321,9 @@
         </section>
 
         <!-- === INICIO: Separador Visual Ancho (en fondo de sección) === -->
-        <!-- CAMBIO: Reemplazado por un separador de bloque completo con gradiente y textura -->
         <div class="py-12 md:py-16 bg-gradient-to-r from-[#5748b5] via-[#308557] to-[#0e65c0] relative overflow-hidden">
-            <!-- Textura de fondo con opacidad (círculos) -->
             <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" stroke="%23ffffff" stroke-width="1"%3E%3Ccircle cx="50" cy="50" r="48" /%3E%3Ccircle cx="50" cy="50" r="38" /%3E%3Ccircle cx="50" cy="50" r="28" /%3E%3C/g%3E%3C/svg%3E'); background-size: 250px 250px; background-position: center;"></div>
             
-            <!-- Motivo central de chispas -->
             <div class="container mx-auto px-4 lg:px-6 relative z-10">
                 <div class="flex items-center justify-center space-x-4 max-w-lg mx-auto">
                     <div class="h-px flex-grow rounded-full bg-white/30"></div>
@@ -360,7 +339,6 @@
         <!-- === FIN: Separador Visual Detallado === -->
         
         <!-- Sección "Próximos Eventos" -->
-        <!-- CAMBIO: Se aplica el fondo de círculos (antes 'stars') -->
         <section class="py-12 md:py-16 section-bg-ornament-circles">
             <div class="container mx-auto px-4 lg:px-6">
                 
@@ -458,12 +436,9 @@
         </section>
 
         <!-- === INICIO: Separador Visual Ancho (en fondo de sección) === -->
-        <!-- CAMBIO: Reemplazado por un separador de bloque completo con gradiente y textura -->
         <div class="py-12 md:py-16 bg-gradient-to-r from-[#5748b5] via-[#308557] to-[#0e65c0] relative overflow-hidden">
-            <!-- Textura de fondo con opacidad (círculos) -->
             <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" stroke="%23ffffff" stroke-width="1"%3E%3Ccircle cx="50" cy="50" r="48" /%3E%3Ccircle cx="50" cy="50" r="38" /%3E%3Ccircle cx="50" cy="50" r="28" /%3E%3C/g%3E%3C/svg%3E'); background-size: 250px 250px; background-position: center;"></div>
             
-            <!-- Motivo central de chispas -->
             <div class="container mx-auto px-4 lg:px-6 relative z-10">
                 <div class="flex items-center justify-center space-x-4 max-w-lg mx-auto">
                     <div class="h-px flex-grow rounded-full bg-white/30"></div>
@@ -581,12 +556,9 @@
         </section>
 
         <!-- === INICIO: Separador Visual Ancho (en fondo de sección) === -->
-        <!-- CAMBIO: Reemplazado por un separador de bloque completo con gradiente y textura -->
         <div class="py-12 md:py-16 bg-gradient-to-r from-[#5748b5] via-[#308557] to-[#0e65c0] relative overflow-hidden">
-            <!-- Textura de fondo con opacidad (puntos) -->
             <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff"%3E%3Ccircle cx="50" cy="50" r="5" /%3E%3Ccircle cx="35" cy="35" r="5" /%3E%3Ccircle cx="65" cy="35" r="5" /%3E%3Ccircle cx="35" cy="65" r="5" /%3E%3Ccircle cx="65" cy="65" r="5" /%3E%3Ccircle cx="50" cy="20" r="5" /%3E%3Ccircle cx="50" cy="80" r="5" /%3E%3C/g%3E%3C/svg%3E'); background-size: 150px 150px; background-position: center 20px;"></div>
             
-            <!-- Motivo central de chispas -->
             <div class="container mx-auto px-4 lg:px-6 relative z-10">
                 <div class="flex items-center justify-center space-x-4 max-w-lg mx-auto">
                     <div class="h-px flex-grow rounded-full bg-white/30"></div>
@@ -600,9 +572,9 @@
             </div>
         </div>
         <!-- === FIN: Separador Visual Detallado === -->
-        
+
         <!-- Sección "Nuestras Alianzas" -->
-        <!-- CAMBIO: Se aplica el fondo de puntos (antes 'f9f9f0') -->
+        <!-- CAMBIO: Fondo cambiado a 'section-bg-ornament-dots' y texto ajustado -->
         <section class="py-12 md:py-16 section-bg-ornament-dots">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12">
@@ -640,34 +612,13 @@
             </div>
         </section>
 
-        <!-- === INICIO: Separador Visual Ancho (en fondo de sección) === -->
-        <!-- CAMBIO: Reemplazado por un separador de bloque completo con gradiente y textura -->
-        <div class="py-12 md:py-16 bg-gradient-to-r from-[#5748b5] via-[#308557] to-[#0e65c0] relative overflow-hidden">
-            <!-- Textura de fondo con opacidad (puntos) -->
-            <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff"%3E%3Ccircle cx="50" cy="50" r="5" /%3E%3Ccircle cx="35" cy="35" r="5" /%3E%3Ccircle cx="65" cy="35" r="5" /%3E%3Ccircle cx="35" cy="65" r="5" /%3E%3Ccircle cx="65" cy="65" r="5" /%3E%3Ccircle cx="50" cy="20" r="5" /%3E%3Ccircle cx="50" cy="80" r="5" /%3E%3C/g%3E%3C/svg%3E'); background-size: 150px 150px; background-position: center 20px;"></div>
-            
-            <!-- Motivo central de chispas -->
-            <div class="container mx-auto px-4 lg:px-6 relative z-10">
-                <div class="flex items-center justify-center space-x-4 max-w-lg mx-auto">
-                    <div class="h-px flex-grow rounded-full bg-white/30"></div>
-                    <div class="flex-shrink-0 flex gap-3 items-center text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                    </div>
-                    <div class="h-px flex-grow rounded-full bg-white/30"></div>
-                </div>
-            </div>
-        </div>
-        <!-- === FIN: Separador Visual Detallado === -->
-
         <!-- Sección "Sigue nuestra comunidad" (Instagram) -->
-        <!-- CAMBIO: Fondo cambiado a bg-gray-900 (footer) y texto ajustado a colores claros -->
-        <section class="py-12 md:py-16 bg-gray-900">
+        <!-- CAMBIO: Fondo cambiado a 'section-bg-ornament-circles' y texto a oscuro -->
+        <section class="py-12 md:py-16 section-bg-ornament-circles">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="text-center max-w-3xl mx-auto mb-10">
-                    <h2 class="text-3xl lg:text-4xl font-extrabold text-white">Sigue nuestra comunidad</h2>
-                    <p class="mt-4 text-lg text-gray-300">
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900">Sigue nuestra comunidad</h2>
+                    <p class="mt-4 text-lg text-gray-700">
                         Conéctate con nosotros en redes sociales y mira lo que estamos haciendo.
                     </p>
                     <a href="https://www.instagram.com/wikimedia_cl/" target="_blank" class="mt-8 inline-flex items-center gap-2 text-white font-medium rounded-lg text-base px-6 py-3 transition-opacity" style="background-color: #5748b5; hover:background-color: #4a3f9a;">
@@ -695,16 +646,17 @@
         
     </main>
     
-    <!-- Footer: Pie de página -->
+    <!-- CAMBIO: Footer reemplazado por el unificado -->
     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
         <div class="container mx-auto px-4 lg:px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 
                 <div>
                     <div class="flex items-center gap-2 mb-4">
+                        <!-- Logo sin fondo blanco -->
                         <img src="/wikimedia chile logo.png" 
                              alt="Wikimedia Chile Logo" 
-                             class="h-9 w-auto bg-white p-1 rounded-sm"
+                             class="h-9 w-auto"
                              onerror="this.onerror=null;this.src='https://placehold.co/120x36/fff/333?text=WM+Chile';">
                     </div>
                     <p class="text-sm text-gray-400 leading-relaxed">
@@ -773,7 +725,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             
             const darkLogo = '/wikiemdia foundation logo.webp';
-            const lightLogo = '/wikiemdia foundation logo.webp';
 
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
