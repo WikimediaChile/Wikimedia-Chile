@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación y Alfabetización (FAED) - Wikimedia Chile</title>
+    <title>Comunicaciones y Comunidad (COALCO) - Wikimedia Chile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,57 +33,55 @@
         #main-header .cta-donar:hover { background-color: #4a3f9a; border-color: #4a3f9a; }
         #main-header.header-scrolled { background-color: #ffffff; color: #4B5563; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
 
-        /* --- ESTILOS DECORATIVOS Y ANIMACIONES --- */
+        /* --- DECORACIÓN Y ANIMACIONES --- */
         .section-bg-ornament-dots {
             background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.4'%3E%3Ccircle cx='50' cy='50' r='4' /%3E%3Ccircle cx='35' cy='35' r='4' /%3E%3Ccircle cx='65' cy='35' r='4' /%3E%3Ccircle cx='35' cy='65' r='4' /%3E%3Ccircle cx='65' cy='65' r='4' /%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.4'%3E%3Ccircle cx='50' cy='50' r='4' /%3E%3Ccircle cx='35' cy='35' r='4' /%3E%3Ccircle cx='65' cy='35' r='4' /%3E%3Ccircle cx='35' cy='65' r='4' /%3E%3Ccircle cx='65' cy='65' r='4' /%3E%3Ccircle cx='50' cy='20' r='4' /%3E%3Ccircle cx='50' cy='80' r='4' /%3E%3C/g%3E%3C/svg%3E");
             background-size: 150px 150px;
             background-position: center top;
         }
 
-        /* Animación suave de entrada */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
         .delay-100 { animation-delay: 0.1s; }
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
 
-        /* Listas personalizadas (Icono Verde) */
-        .list-check li {
+        /* Listas personalizadas (Teal) */
+        .list-check-teal li {
             position: relative;
             padding-left: 2.5rem;
             margin-bottom: 1rem;
+            color: #374151;
         }
-        .list-check li::before {
+        .list-check-teal li::before {
             content: "";
             position: absolute;
             left: 0;
             top: 0.25rem;
             width: 1.5rem;
             height: 1.5rem;
-            /* Icono SVG Check en Verde */
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2316a34a' class='w-6 h-6'%3E%3Cpath fill-rule='evenodd' d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            /* Icono check teal */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230d9488' class='w-6 h-6'%3E%3Cpath fill-rule='evenodd' d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z' clip-rule='evenodd' /%3E%3C/svg%3E");
             background-size: contain;
             background-repeat: no-repeat;
         }
 
-        /* Tarjetas de Trabajo */
+        /* Tarjetas de Trabajo (Teal) */
         .work-card {
             background: white;
             border: 1px solid #e5e7eb;
             border-radius: 1rem;
             padding: 1.5rem;
             transition: all 0.3s ease;
-            border-left: 4px solid #16a34a; /* Verde Wiki */
+            border-left: 4px solid #0d9488; /* Teal Wiki */
         }
         .work-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(22, 163, 74, 0.15);
+            box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.15);
         }
 
         /* Sidebar Link */
@@ -98,9 +96,9 @@
             font-weight: 500;
         }
         .sidebar-link:hover {
-            background-color: #f0fdf4; /* Verde muy claro */
-            border-color: #bbf7d0;
-            color: #15803d;
+            background-color: #f0fdfa; /* Teal muy claro */
+            border-color: #ccfbf1;
+            color: #0f766e;
             padding-left: 1.25rem;
         }
     </style>
@@ -192,7 +190,7 @@
             <img src="banner.png" 
                  alt="Banner Programas" 
                  class="w-full h-full object-cover object-center" 
-                 onerror="this.src='https://placehold.co/1920x600/eee/999?text=Banner+FAED';">
+                 onerror="this.src='https://placehold.co/1920x600/eee/999?text=Banner+COALCO';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         </section>
 
@@ -224,7 +222,7 @@
                                 <svg class="h-5 w-5 flex-shrink-0 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                                 </svg>
-                                <span class="ml-2 text-sm font-bold text-green-600" aria-current="page">FAED</span>
+                                <span class="ml-2 text-sm font-bold text-teal-600" aria-current="page">COALCO</span>
                             </div>
                         </li>
                     </ol>
@@ -242,16 +240,16 @@
                         
                         <!-- Encabezado del Programa -->
                         <div class="animate-fade-in-up">
-                            <span class="text-sm font-bold tracking-wider text-green-600 uppercase mb-2 block">Programa</span>
+                            <span class="text-sm font-bold tracking-wider text-teal-600 uppercase mb-2 block">Programa</span>
                             <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-                                Formación, Alfabetización y <span class="text-green-600">Educación Digital</span> (FAED)
+                                Comunicaciones, Alianzas y <span class="text-teal-600">Comunidad</span> (COALCO)
                             </h1>
                             <div class="prose prose-lg text-gray-600 leading-relaxed">
                                 <p class="text-lg">
-                                    Este programa busca formar a docentes, estudiantes, usuarios y comunidades subrepresentadas en las plataformas Wikimedia para fortalecer habilidades críticas digitales, promoviendo la <b>alfabetización mediática e informacional</b>, el pensamiento crítico y la autonomía.
+                                    Este programa busca acompañar y fortalecer la participación de miembros de la comunidad local en los proyectos y actividades de Wikimedia Chile para fortalecer su vínculo con el capítulo y atraer a nuevos voluntarios que compartan los valores de Wikimedia.
                                 </p>
                                 <p class="mt-4">
-                                    Para ello, usamos plataformas como <b class="text-blue-600">Wikipedia</b>, <b class="text-green-600">Wikidata</b> y <b class="text-purple-600">Wikimedia Commons</b>, para promover el uso de los entornos digitales como habilitadores de la ciudadanía activa. Creemos en la formación como un proceso colectivo, creativo y contextualizado, donde el conocimiento libre es una herramienta para transformar los espacios comunitarios.
+                                    A través de estrategias de comunicación, articulación de redes y difusión, el programa posiciona a Wikimedia Chile como una <b class="text-teal-600">voz activa en el debate público nacional</b> sobre acceso a la información, tecnologías abiertas, ciencia abierta y otros temas vinculados a la misión del movimiento Wikimedia.
                                 </p>
                             </div>
                         </div>
@@ -259,13 +257,15 @@
                         <!-- Objetivos -->
                         <div class="animate-fade-in-up delay-100">
                             <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                <span class="w-8 h-1 bg-green-600 rounded-full"></span> Objetivos del programa
+                                <span class="w-8 h-1 bg-teal-600 rounded-full"></span> Objetivos del programa
                             </h2>
-                            <div class="bg-green-50 rounded-2xl p-8 border border-green-100 shadow-sm">
-                                <ul class="list-check text-gray-700 space-y-4 text-lg">
-                                    <li>Vincularnos con comunidades interesadas en desarrollar habilidades como la <b class="text-gray-900">lectura crítica</b>, la colaboración y la comunicación.</li>
-                                    <li>Formar a docentes y estudiantes en el uso educativo de <b class="text-gray-900">Wikipedia, Commons y Wikidata</b> y otros proyectos que enriquezcan sus experiencias digitales.</li>
-                                    <li>Promover la creación de <b class="text-gray-900">contenido libre</b> que releve identidades, memorias y patrimonios locales.</li>
+                            <div class="bg-teal-50 rounded-2xl p-8 border border-teal-100 shadow-sm">
+                                <ul class="list-check-teal text-gray-700 space-y-4 text-lg">
+                                    <li>Fortalecer la relación con la comunidad de socios/as de Wikimedia Chile, promoviendo su participación y sentido de pertenencia.</li>
+                                    <li>Atraer a nuevos voluntarios/as que compartan los valores del movimiento Wikimedia, con foco en <b class="text-gray-900">comunidades subrepresentadas</b>.</li>
+                                    <li>Consolidar a Wikimedia Chile como una voz incidente y autorizada en el debate público sobre conocimiento libre.</li>
+                                    <li>Promover <b class="text-gray-900">alianzas estratégicas</b> y vínculos sostenidos con instituciones, medios y actores clave a nivel nacional e internacional.</li>
+                                    <li>Mejorar la comunicación externa e interna de la organización, con narrativas claras y estrategias participativas.</li>
                                 </ul>
                             </div>
                         </div>
@@ -273,34 +273,30 @@
                         <!-- Cómo trabajamos -->
                         <div class="animate-fade-in-up delay-200">
                             <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                <span class="w-8 h-1 bg-green-600 rounded-full"></span> Cómo trabajamos
+                                <span class="w-8 h-1 bg-teal-600 rounded-full"></span> Cómo trabajamos
                             </h2>
                             <p class="text-gray-600 mb-6 text-lg">Desarrollamos actividades en distintos formatos para cumplir nuestros objetivos:</p>
                             
-                            <div class="grid gap-6">
+                            <div class="grid md:grid-cols-2 gap-6">
                                 <!-- Card 1 -->
-                                <div class="work-card border-l-green-600">
-                                    <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                                        Wiki en la U
-                                    </h3>
-                                    <p class="text-gray-600">Formación en educación superior para el uso crítico y académico de proyectos Wikimedia.</p>
+                                <div class="work-card border-l-teal-600">
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Comunicación Estratégica</h3>
+                                    <p class="text-gray-600 text-sm">Gestionamos redes sociales, sitio web, boletines y medios para comunicar nuestras actividades y campañas.</p>
                                 </div>
                                 <!-- Card 2 -->
                                 <div class="work-card border-l-blue-600">
-                                    <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
-                                        Formación Docente
-                                    </h3>
-                                    <p class="text-gray-600">Talleres, cursos y seminarios para planificar estrategias pedagógicas con Wikipedia, Commons y Wikidata.</p>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Contenidos Educativos</h3>
+                                    <p class="text-gray-600 text-sm">Creamos materiales educativos, infografías y contenidos audiovisuales sobre Wikimedia y temas relacionados.</p>
                                 </div>
                                 <!-- Card 3 -->
                                 <div class="work-card border-l-purple-600">
-                                    <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                                        Culturas Digitales
-                                    </h3>
-                                    <p class="text-gray-600">Colaboración con instituciones para investigar el acceso y uso de la información en entornos digitales.</p>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Posicionamiento</h3>
+                                    <p class="text-gray-600 text-sm">Participamos en eventos, congresos y medios de comunicación, posicionando nuestras voces y propuestas.</p>
+                                </div>
+                                <!-- Card 4 -->
+                                <div class="work-card border-l-green-600">
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Comunidad</h3>
+                                    <p class="text-gray-600 text-sm">Fortalecemos la comunidad de socios/as a través de encuentros, campañas y espacios de participación.</p>
                                 </div>
                             </div>
                         </div>
@@ -315,13 +311,17 @@
                                 Proyectos destacados
                             </h3>
                             <div class="space-y-3">
-                                <a href="/programas-certificacion.html" class="sidebar-link flex items-center justify-between group">
-                                    <span>Certificación Wiki Profes</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                                <a href="#" class="sidebar-link flex items-center justify-between group">
+                                    <span>Podcast WikiCafé</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
                                 </a>
                                 <a href="#" class="sidebar-link flex items-center justify-between group">
-                                    <span>Wikipedia en el Aula</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                                    <span>WikiDía</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                                <a href="#" class="sidebar-link flex items-center justify-between group">
+                                    <span>WikiTecito</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
                                 </a>
                             </div>
                              
@@ -330,13 +330,13 @@
                         <!-- CTA Box -->
                         <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
                             <!-- Círculo decorativo -->
-                            <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-green-500 rounded-full opacity-20"></div>
+                            <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-teal-600 rounded-full opacity-20"></div>
                             
                             <h3 class="text-xl font-bold mb-3 relative z-10">¿Quieres colaborar?</h3>
                             <p class="text-gray-300 text-sm mb-6 leading-relaxed relative z-10">
-                                Si trabajas en educación y quieres incorporar el conocimiento libre en tu comunidad, ¡escríbenos!
+                                ¿Eres parte de una institución, colectivo o medio de comunicación y quieres aliarte con Wikimedia Chile? ¿Te interesa participar en nuestras actividades?
                             </p>
-                            <a href="mailto:educacion@wikimediachile.cl" class="block w-full text-center bg-green-600 hover:bg-green-500 text-white font-bold py-3.5 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg relative z-10">
+                            <a href="mailto:contacto@wikimediachile.cl" class="block w-full text-center bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg relative z-10">
                                 Escríbenos
                             </a>
                         </div>

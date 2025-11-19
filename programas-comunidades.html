@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título específico de la página -->
-    <title>Programas - Comunidades (TECOLO) - Wikimedia Chile</title>
-    
+    <title>Territorios y Contenidos Locales (TECOLO) - Wikimedia Chile</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Estilos (Consistentes con el resto del sitio) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -20,7 +15,8 @@
             -moz-osx-font-smoothing: grayscale;
             background-color: #ffffff; 
         }
-        /* --- HEADER (IDÉNTICO A INDEX.HTML) --- */
+        
+        /* --- HEADER STYLES --- */
         #main-header {
             transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
             color: #4B5563;
@@ -29,94 +25,110 @@
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
         }
-        #main-header .nav-link {
-            color: #4B5563;
-            text-shadow: none;
-            transition: color 0.3s ease;
-        }
-         #main-header .nav-link:hover {
-            color: #5748b5;
-         }
-        #main-header .cta-socio {
-            background-color: transparent;
-            border: 2px solid #E5E7EB;
-            color: #5748b5;
-            transition: all 0.3s ease-in-out;
-            font-weight: 600;
-        }
-        #main-header .cta-socio:hover {
-            background-color: #F3F4F6;
-        }
-        #main-header .cta-donar {
-            background-color: #5748b5;
-            border: 2px solid #5748b5;
-            color: white;
-            transition: all 0.3s ease-in-out;
-            font-weight: 600;
-        }
-        #main-header .cta-donar:hover {
-            background-color: #4a3f9a;
-            border-color: #4a3f9a;
-        }
-        #main-header.header-scrolled {
-            background-color: #ffffff; 
-            color: #4B5563;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-        #main-header.header-scrolled .nav-link {
-            color: #4B5563;
-            text-shadow: none;
-        }
-        #main-header.header-scrolled .nav-link:hover {
-            color: #5748b5;
-        }
-        #main-header.header-scrolled .cta-socio {
-            background-color: transparent;
-            border-color: #E5E7EB;
-            color: #5748b5;
-            font-weight: 600;
-        }
-        #main-header.header-scrolled .cta-socio:hover {
-            background-color: #F3F4F6;
-        }
-         #main-header.header-scrolled .cta-donar {
-            background-color: #5748b5;
-            color: white;
-            border-color: #5748b5;
-            font-weight: 600;
-        }
-        #main-header.header-scrolled .cta-donar:hover {
-            background-color: #4a3f9a;
-            border-color: #4a3f9a;
-        }
-        /* --- ESTILOS DE FONDOS DE SECCIÓN --- */
-        .section-bg-ornament-circles {
-            background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23e5e7eb' stroke-width='1'%3E%3Ccircle cx='50' cy='50' r='48' /%3E%3Ccircle cx='50' cy='50' r='38' /%3E%3Ccircle cx='50' cy='50' r='28' /%3E%3C/g%3E%3C/svg%3E");
-            background-size: 250px 250px;
-            background-position: center top;
-        }
+        #main-header .nav-link { color: #4B5563; transition: color 0.3s ease; }
+        #main-header .nav-link:hover { color: #5748b5; }
+        #main-header .cta-socio { border: 2px solid #E5E7EB; color: #5748b5; font-weight: 600; transition: all 0.3s ease-in-out; }
+        #main-header .cta-socio:hover { background-color: #F3F4F6; }
+        #main-header .cta-donar { background-color: #5748b5; border: 2px solid #5748b5; color: white; font-weight: 600; transition: all 0.3s ease-in-out; }
+        #main-header .cta-donar:hover { background-color: #4a3f9a; border-color: #4a3f9a; }
+        #main-header.header-scrolled { background-color: #ffffff; color: #4B5563; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+
+        /* --- DECORACIÓN Y ANIMACIONES --- */
         .section-bg-ornament-dots {
             background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.6'%3E%3Ccircle cx='50' cy='50' r='5' /%3E%3Ccircle cx='35' cy='35' r='5' /%3E%3Ccircle cx='65' cy='35' r='5' /%3E%3Ccircle cx='35' cy='65' r='5' /%3E%3Ccircle cx='65' cy='65' r='5' /%3E%3Ccircle cx='50' cy='20' r='5' /%3E%3Ccircle cx='50' cy='80' r='5' /%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.4'%3E%3Ccircle cx='50' cy='50' r='4' /%3E%3Ccircle cx='35' cy='35' r='4' /%3E%3Ccircle cx='65' cy='35' r='4' /%3E%3Ccircle cx='35' cy='65' r='4' /%3E%3Ccircle cx='65' cy='65' r='4' /%3E%3Ccircle cx='50' cy='20' r='4' /%3E%3Ccircle cx='50' cy='80' r='4' /%3E%3C/g%3E%3C/svg%3E");
             background-size: 150px 150px;
-            background-position: center 20px;
+            background-position: center top;
         }
-        /* --- UTILIDADES --- */
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        /* Listas personalizadas (Morado) */
+        .list-check-purple li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+        .list-check-purple li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            /* Icono check morado */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239333ea' class='w-6 h-6'%3E%3Cpath fill-rule='evenodd' d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        /* Tarjetas de Trabajo (Morado) */
+        .work-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid #9333ea; /* Morado Wiki */
+        }
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(147, 51, 234, 0.15);
+        }
+
+        /* Sidebar Link */
+        .sidebar-link {
+            display: block;
+            padding: 1rem;
+            background-color: #f8fafc;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+            color: #334155;
+            font-weight: 500;
+        }
+        .sidebar-link:hover {
+            background-color: #faf5ff; /* Morado muy claro */
+            border-color: #e9d5ff;
+            color: #7e22ce;
+            padding-left: 1.25rem;
+        }
+
+        /* Card de Temáticas */
+        .theme-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: #faf5ff;
+            border: 1px solid #f3e8ff;
+            border-radius: 0.75rem;
+        }
+        .theme-icon {
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9333ea;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
     </style>
 </head>
 <body class="bg-white text-gray-800">
 
-    <!-- ===== HEADER (IDÉNTICO A INDEX.HTML) ===== -->
+    <!-- HEADER -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 header-scrolled">
         <nav class="container mx-auto px-6 lg:px-8 py-5">
             <div class="flex justify-between items-center">
@@ -132,7 +144,7 @@
                 
                 <div class="hidden lg:flex flex-1 justify-center items-center gap-8">
                     <a href="sobre-nosotros.html" class="nav-link font-medium">Sobre Nosotros</a>
-                    <a href="programas.html" class="nav-link font-medium text-blue-600">Programas</a> <!-- Link activo -->
+                    <a href="programas.html" class="nav-link font-medium text-blue-600">Programas</a>
                     <a href="noticias.html" class="nav-link font-medium">Noticias</a>
                     <a href="agenda.html" class="nav-link font-medium">Agenda</a>
                     <button id="search-button-desktop" class="nav-link" aria-label="Abrir búsqueda">
@@ -157,12 +169,9 @@
         </nav>
         
         <!-- Menú Móvil -->
-        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-50 p-6">
+        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-50 p-6" style="background-color: white;">
             <div class="flex justify-between items-center mb-8">
-                <img src="/wikiemdia foundation logo.webp" 
-                     alt="Wikimedia Chile Logo" 
-                     class="h-9 w-auto"
-                     onerror="this.onerror=null;this.src='https://placehold.co/120x36/333/fff?text=WM+Chile';">
+                <img src="/wikiemdia foundation logo.webp" alt="Wikimedia Chile Logo" class="h-9 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/120x36/333/fff?text=WM+Chile';">
                 <button id="close-mobile-menu" class="text-gray-700 p-2" aria-label="Cerrar menú">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
@@ -170,19 +179,17 @@
             <div class="flex flex-col gap-5">
                 <a href="index.html" class="block text-xl text-gray-700 hover:text-blue-600 font-medium py-2">Inicio</a>
                 <a href="sobre-nosotros.html" class="block text-xl text-gray-700 hover:text-blue-600 font-medium py-2">Sobre Nosotros</a>
-                <a href="programas.html" class="block text-xl text-blue-600 font-semibold py-2">Programas</a> <!-- Link activo -->
+                <a href="programas.html" class="block text-xl text-blue-600 font-semibold py-2">Programas</a>
                 <a href="noticias.html" class="block text-xl text-gray-700 hover:text-blue-600 font-medium py-2">Noticias</a>
                 <a href="agenda.html" class="block text-xl text-gray-700 hover:text-blue-600 font-medium py-2">Agenda</a>
-                
                 <hr class="my-4">
-                
                 <a href="hazte-socio.html" class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-base px-5 py-3 text-center transition-colors">Hazte Socio/a</a>
                 <a href="donar.html" class="text-gray-700 bg-gray-100 hover:bg-gray-200 font-medium rounded-lg text-base px-5 py-3 text-center transition-colors">Donar</a>
             </div>
         </div>
     </header>
 
-    <!-- ===== MODAL DE BÚSQUEDA (IDÉNTICO A INDEX.HTML) ===== -->
+    <!-- Modal de Búsqueda -->
     <div id="search-modal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-start justify-center pt-20 md:pt-32 p-4">
         <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl relative" id="search-modal-content">
             <button id="close-search-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600" aria-label="Cerrar búsqueda">
@@ -199,34 +206,20 @@
             </div>
         </div>
     </div>
-    
-    <!-- ===== CONTENIDO PRINCIPAL - PÁGINA PROGRAMA COMUNIDADES ===== -->
+
     <main>
-        
-        <!-- Encabezado de la Página (Hero) -->
-        <section class="relative pt-48 pb-32 text-center text-white overflow-hidden">
-            <!-- Imagen de fondo (Placeholder - Reemplazar con una imagen tuya) -->
-            <img src="https://placehold.co/1600x800/5748b5/ffffff?text=Comunidad+TECOLO" 
-                 alt="Comunidad de Wikimedia Chile" 
-                 class="absolute inset-0 w-full h-full object-cover">
-            <!-- Overlay oscuro -->
-            <div class="absolute inset-0 bg-black/60"></div>
-            <!-- Contenido -->
-            <div class="container mx-auto px-4 lg:px-6 relative z-10">
-                <span class="block text-base font-bold uppercase text-purple-300 tracking-wider">Programa</span>
-                <h1 class="text-4xl lg:text-5xl font-extrabold !leading-tight tracking-tight drop-shadow-xl mt-2">
-                    Territorios y Contenidos Locales (TECOLO)
-                </h1>
-                <p class="mt-6 text-lg text-gray-200 max-w-3xl mx-auto drop-shadow-lg">
-                    Este programa considera el trabajo directo con comunidades de Chile y representantes de la sociedad civil interesadas en crear y mejorar conocimiento en las plataformas Wikimedia sobre la historia y cultura de nuestro país.
-                </p>
-            </div>
+        <!-- BANNER PRINCIPAL -->
+        <section class="relative pt-20 h-[400px] md:h-[450px] flex items-center justify-center bg-gray-100 overflow-hidden">
+            <img src="banner.png" 
+                 alt="Banner Programas" 
+                 class="w-full h-full object-cover object-center" 
+                 onerror="this.src='https://placehold.co/1920x600/eee/999?text=Banner+TECOLO';">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         </section>
 
-        <!-- === Separador Visual (El que te gustó de index.html) CON BREADCRUMBS === -->
-        <div class="py-8 md:py-12">
+        <!-- BREADCRUMBS -->
+        <div class="py-8 md:py-10">
             <div class="container mx-auto px-4 lg:px-6">
-                <!-- Breadcrumbs (DISEÑO MEJORADO) -->
                 <nav class="flex justify-center" aria-label="Breadcrumb">
                     <ol role="list" class="flex items-center space-x-2">
                         <li>
@@ -244,7 +237,7 @@
                                 <svg class="h-5 w-5 flex-shrink-0 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                                 </svg>
-                                <a href="programas.html" class="ml-2 text-sm font-medium text-gray-500 hover:text-gray-700">Programas</a>
+                                <a href="programas.html" class="ml-2 text-sm font-medium text-gray-600 hover:text-gray-900" aria-current="page">Programas</a>
                             </div>
                         </li>
                         <li>
@@ -252,191 +245,165 @@
                                 <svg class="h-5 w-5 flex-shrink-0 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                                 </svg>
-                                <a href="programas-comunidades.html" class="ml-2 text-sm font-medium text-gray-600 hover:text-gray-900" aria-current="page">Comunidades</a>
+                                <span class="ml-2 text-sm font-bold text-purple-600" aria-current="page">TECOLO</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
-                <div class="flex items-center justify-center space-x-4 max-w-lg mx-auto mt-8">
-                    <div class="h-px flex-grow rounded-full" style="background: linear-gradient(to left, #5748b5, #308557, #0e65c0); opacity: 0.3;"></div>
-                    <div class="flex-shrink-0 flex gap-3 items-center">
-                        <svg class="w-5 h-5" style="color: #0e65c0;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-7 h-7" style="color: #5748b5;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-5 h-5" style="color: #308557;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                    </div>
-                    <div class="h-px flex-grow rounded-full" style="background: linear-gradient(to right, #5748b5, #308557, #0e65c0); opacity: 0.3;"></div>
-                </div>
             </div>
         </div>
-        
-        <!-- Sección 1: Temáticas -->
-        <section class="py-16 md:py-24 section-bg-ornament-dots"> <!-- Fondo de Puntos -->
-            <div class="container mx-auto px-4 lg:px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                    <!-- Columna de Texto -->
-                    <div>
-                        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900">
-                            La creación y difusión del conocimiento en Internet requiere de todos y todas.
-                        </h2>
-                        <p class="text-lg text-gray-700 mt-6 leading-relaxed">
-                            Esa inclusión parte de la participación de usuarios y comunidades representantes de los diferentes territorios que componen Chile. Promovemos la creación de conocimiento sobre temáticas relevantes para Wikimedia, como:
-                        </p>
-                        <ul class="space-y-4 mt-8">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 flex-shrink-0 text-purple-600 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span class="text-lg text-gray-700">Género y diversidades sexo-genéricas</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 flex-shrink-0 text-purple-600 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span class="text-lg text-gray-700">Medioambiente y justicia climática</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 flex-shrink-0 text-purple-600 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span class="text-lg text-gray-700">Patrimonio cultural y natural</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 flex-shrink-0 text-purple-600 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span class="text-lg text-gray-700">Pueblos originarios y comunidades lingüísticas</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 flex-shrink-0 text-purple-600 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span class="text-lg text-gray-700">Memoria y DD.HH.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Columna de Imagen -->
-                    <figure class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-                        <!-- REEMPLAZA ESTE SRC con la URL de tu imagen -->
-                        <img src="/Editatona Feminista en Wikipedia (2024) organizada junto a la Dirección de género de la FCFM UCH.jpeg" 
-                             alt="Participantes de un taller de Wikimedia Chile"
-                             class="w-full h-auto object-cover">
-                        <figcaption class="p-4 text-sm text-gray-600 bg-gray-50 border-t border-gray-100">
-                            Editatona Feminista en Wikipedia (2024) organizada junto a la Dirección de género de la FCFM UCH
 
-                        </figcaption>
-                    </figure>
+        <!-- CONTENIDO PRINCIPAL -->
+        <section class="pt-4 pb-16 md:pb-24 section-bg-ornament-dots">
+            <div class="container mx-auto px-4 lg:px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+                    
+                    <!-- Columna Izquierda: Información (Ocupa 8/12 columnas) -->
+                    <div class="lg:col-span-8 space-y-12">
+                        
+                        <!-- Encabezado del Programa -->
+                        <div class="animate-fade-in-up">
+                            <span class="text-sm font-bold tracking-wider text-purple-600 uppercase mb-2 block">Programa</span>
+                            <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                                Territorios y <span class="text-purple-600">Contenidos Locales</span> (TECOLO)
+                            </h1>
+                            <div class="prose prose-lg text-gray-600 leading-relaxed">
+                                <p class="text-lg">
+                                    Este programa trabaja directamente con comunidades y representantes de la sociedad civil para promover la creación y enriquecimiento del contenido sobre Chile en las plataformas Wikimedia, mediante el trabajo con diversas comunidades a lo largo del territorio y en línea.
+                                </p>
+                                <p class="mt-4">
+                                    Creemos que el conocimiento en Internet debe construirse de forma colectiva, reconociendo y visibilizando las <b class="text-gray-900">voces de los distintos territorios del país</b>. Nuestro enfoque pone en el centro a las comunidades, promoviendo temáticas claves que han sido históricamente subrepresentadas en los espacios digitales.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Temáticas Prioritarias (Grid de tarjetas) -->
+                        <div class="animate-fade-in-up delay-100">
+                            <h3 class="text-xl font-bold text-gray-900 mb-5">Temáticas Prioritarias</h3>
+                            <div class="grid gap-4 md:grid-cols-3">
+                                <div class="theme-card">
+                                    <div class="theme-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-700 leading-tight">Diversidades, género y derechos humanos</span>
+                                </div>
+                                <div class="theme-card">
+                                    <div class="theme-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-700 leading-tight">Territorio, medioambiente y justicia climática</span>
+                                </div>
+                                <div class="theme-card">
+                                    <div class="theme-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-700 leading-tight">Patrimonio, lenguas y saberes locales</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Objetivos -->
+                        <div class="animate-fade-in-up delay-200">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <span class="w-8 h-1 bg-purple-600 rounded-full"></span> Objetivos del programa
+                            </h2>
+                            <div class="bg-purple-50 rounded-2xl p-8 border border-purple-100 shadow-sm">
+                                <ul class="list-check-purple text-gray-700 space-y-4 text-lg">
+                                    <li>Fortalecer la participación de comunidades locales en la creación y mejora de contenidos en plataformas Wikimedia.</li>
+                                    <li>Visibilizar temáticas y territorios históricamente subrepresentados en el ecosistema digital.</li>
+                                    <li>Promover la <b class="text-gray-900">descentralización del conocimiento libre</b> desde un enfoque comunitario y colaborativo.</li>
+                                    <li>Apoyar iniciativas locales mediante formación, acompañamiento y recursos para la creación de contenidos libres.</li>
+                                    <li>Conectar a comunidades chilenas con redes nacionales e internacionales vinculadas al conocimiento abierto.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Cómo trabajamos -->
+                        <div class="animate-fade-in-up delay-300">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <span class="w-8 h-1 bg-purple-600 rounded-full"></span> Cómo trabajamos
+                            </h2>
+                            <p class="text-gray-600 mb-6 text-lg">Desarrollamos actividades en distintos formatos para cumplir nuestros objetivos:</p>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Card 1 -->
+                                <div class="work-card border-l-purple-600">
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Actividades Comunitarias</h3>
+                                    <p class="text-gray-600 text-sm">Organizamos editatones, talleres y concursos fotográficos junto a comunidades locales.</p>
+                                </div>
+                                <!-- Card 2 -->
+                                <div class="work-card border-l-blue-600">
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Redes de Colaboración</h3>
+                                    <p class="text-gray-600 text-sm">Participamos activamente en redes nacionales e internacionales relacionadas con nuestras temáticas prioritarias.</p>
+                                </div>
+                                <!-- Card 3 -->
+                                <div class="work-card border-l-green-600">
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Microfinanciamiento</h3>
+                                    <p class="text-gray-600 text-sm">Impulsamos fondos de microfinanciamiento para apoyar proyectos comunitarios que promuevan el conocimiento libre.</p>
+                                </div>
+                                <!-- Card 4 -->
+                                <div class="work-card border-l-yellow-500">
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Descentralización</h3>
+                                    <p class="text-gray-600 text-sm">Buscamos activamente descentralizar nuestras actividades y llegar a distintas regiones del país.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Sidebar (Ocupa 4/12 columnas) -->
+                    <div class="lg:col-span-4 space-y-8 animate-fade-in-up delay-300">
+                        
+                        <!-- Proyectos Destacados -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                            <h3 class="text-lg font-extrabold text-gray-900 mb-4 pb-2 border-b border-gray-100">
+                                Proyectos destacados
+                            </h3>
+                            <div class="space-y-3">
+                                <a href="#" class="sidebar-link flex items-center justify-between group">
+                                    <span>Editatones temáticas</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                                <a href="#" class="sidebar-link flex items-center justify-between group">
+                                    <span>Wiki Recorriendo Chile</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                                <a href="#" class="sidebar-link flex items-center justify-between group">
+                                    <span>Fondos de microfinanciamiento</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                                <a href="#" class="sidebar-link flex items-center justify-between group">
+                                    <span>Concurso Wiki Ciencia</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                                <a href="#" class="sidebar-link flex items-center justify-between group">
+                                    <span>Jornadas de digitalización</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                            </div>
+                             
+                        </div>
+
+                        <!-- CTA Box -->
+                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                            <!-- Círculo decorativo -->
+                            <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-purple-500 rounded-full opacity-20"></div>
+                            
+                            <h3 class="text-xl font-bold mb-3 relative z-10">¿Quieres colaborar?</h3>
+                            <p class="text-gray-300 text-sm mb-6 leading-relaxed relative z-10">
+                                Si eres parte de una comunidad u organización interesada en visibilizar contenidos desde los territorios, ¡contáctanos!
+                            </p>
+                            <a href="mailto:actividades@wikimediachile.cl" class="block w-full text-center bg-purple-600 hover:bg-purple-500 text-white font-bold py-3.5 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg relative z-10">
+                                Escríbenos
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- === INICIO: Separador Visual Ancho (COMO EN INDEX) === -->
-        <div class="py-12 md:py-16 bg-gradient-to-r from-[#5748b5] via-[#308557] to-[#0e65c0] relative overflow-hidden">
-            <!-- Textura de fondo con opacidad (puntos) -->
-            <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff"%3E%3Ccircle cx="50" cy="50" r="5" /%3E%3Ccircle cx="35" cy="35" r="5" /%3E%3Ccircle cx="65" cy="35" r="5" /%3E%3Ccircle cx="35" cy="65" r="5" /%3E%3Ccircle cx="65" cy="65" r="5" /%3E%3Ccircle cx="50" cy="20" r="5" /%3E%3Ccircle cx="50" cy="80" r="5" /%3E%3C/g%3E%3C/svg%3E'); background-size: 150px 150px; background-position: center 20px;"></div>
-            
-            <!-- Motivo central de chispas -->
-            <div class="container mx-auto px-4 lg:px-6 relative z-10">
-                <div class="flex items-center justify-center space-x-4 max-w-lg mx-auto">
-                    <div class="h-px flex-grow rounded-full bg-white/30"></div>
-                    <div class="flex-shrink-0 flex gap-3 items-center text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                    </div>
-                    <div class="h-px flex-grow rounded-full bg-white/30"></div>
-                </div>
-            </div>
-        </div>
-        <!-- === FIN: Separador Visual Ancho === -->
-
-        <!-- Sección 2: ¿Cómo trabajamos? -->
-        <section class="py-16 md:py-24 section-bg-ornament-circles"> <!-- Fondo de Círculos -->
-            <div class="container mx-auto px-4 lg:px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                    <!-- Columna de Texto -->
-                    <div class="md:col-start-2"> <!-- Columna de texto a la derecha -->
-                        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900">
-                            ¿Cómo trabajamos?
-                        </h2>
-                        <ul class="space-y-4 mt-8">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 flex-shrink-0 text-purple-600 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span class="text-lg text-gray-700">Organizamos jornadas de maratones de edición en Wikipedia (editatones) y de liberación de archivos en Wikimedia Commons, junto a las comunidades de todo el país.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 flex-shrink-0 text-purple-600 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span class="text-lg text-gray-700">Articulamos de redes nacionales e internacionales que promueven las temáticas de interés para el movimiento Wikimedia.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 flex-shrink-0 text-purple-600 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span class="text-lg text-gray-700">Impulsamos y apoyamos a nuestras socias/os para apoyar iniciativas de creación de contenido relevante, útil y verificable en las plataformas Wikimedia.</span>
-                            </li>
-                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 flex-shrink-0 text-purple-600 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span class="text-lg text-gray-700">Trabajamos para descentralizar nuestras labores y llegar a más regiones de nuestro país.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Columna de Imágenes -->
-                    <div class="md:col-start-1 md:row-start-1 grid grid-cols-1 gap-6"> <!-- Columna de imagen a la izquierda -->
-                        <figure class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-                            <!-- REEMPLAZA ESTE SRC con la URL de tu imagen -->
-                            <img src="/Partido de despedida de la selección de fútbol femenino (2019).jpg" 
-                                 alt="Personas editando en un taller"
-                                 class="w-full h-auto object-cover">
-                            <figcaption class="p-4 text-sm text-gray-600 bg-gray-50 border-t border-gray-100">
-                                Partido de despedida de la selección de fútbol femenino (2019)
-
-                            </figcaption>
-                        </figure>
-                        <figure class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-                            <!-- REEMPLAZA ESTE SRC con la URL de tu imagen -->
-                            <img src="/Cementerio Parroquial de San Antonio, Valparaíso JorgeArtBnw.jpg" 
-                                 alt="Vista de un taller de edición"
-                                 class="w-full h-auto object-cover">
-                            <figcaption class="p-4 text-sm text-gray-600 bg-gray-50 border-t border-gray-100">
-                                <!-- REEMPLAZA ESTE TEXTO con tu pie de foto -->
-                                Cementerio Parroquial de San Antonio, Valparaíso JorgeArtBnw (CC BY-SA 4.0) Imagen ganadora del concurso "Fotografiando patrimonio funerario en Chile" (2024)
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- === INICIO: Separador Visual Ancho (COMO EN INDEX) === -->
-        <div class="py-12 md:py-16 bg-gradient-to-r from-[#5748b5] via-[#308557] to-[#0e65c0] relative overflow-hidden">
-            <!-- Textura de fondo con opacidad (círculos) -->
-            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" stroke="%23ffffff" stroke-width="1"%3E%3Ccircle cx="50" cy="50" r="48" /%3E%3Ccircle cx="50" cy="50" r="38" /%3E%3Ccircle cx="50" cy="50" r="28" /%3E%3C/g%3E%3C/svg%3E'); background-size: 250px 250px; background-position: center;"></div>
-            
-            <!-- Motivo central de chispas -->
-            <div class="container mx-auto px-4 lg:px-6 relative z-10">
-                <div class="flex items-center justify-center space-x-4 max-w-lg mx-auto">
-                    <div class="h-px flex-grow rounded-full bg-white/30"></div>
-                    <div class="flex-shrink-0 flex gap-3 items-center text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                    </div>
-                    <div class="h-px flex-grow rounded-full bg-white/30"></div>
-                </div>
-            </div>
-        </div>
-        <!-- === FIN: Separador Visual Ancho === -->
-
-        <!-- Sección 3: CTA Colabora -->
-        <section class="py-16 md:py-24 section-bg-ornament-dots"> <!-- Fondo de Puntos -->
-            <div class="container mx-auto px-4 lg:px-6">
-                <div class="max-w-3xl mx-auto text-center">
-                    <svg class="w-12 h-12 mx-auto" style="color: #5748b5;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                    <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-4">
-                        ¿Colaboramos?
-                    </h2>
-                    <p class="mt-6 text-base lg:text-lg text-gray-700 leading-relaxed">
-                        Si te interesa saber más sobre este programa o quieres proponer una actividad de creación de contenidos para Wikimedia, ¡escríbenos!
-                    </p>
-                    <a href="mailto:actividades@wikimediachile.cl" 
-                       class="mt-8 inline-block text-white font-medium rounded-lg text-base px-6 py-3 transition-colors" 
-                       style="background-color: #5748b5; hover:background-color: #4a3f9a;">
-                        Enviar un correo &rarr;
-                    </a>
-                </div>
-            </div>
-        </section>
-
     </main>
-    
-    <!-- ===== FOOTER (IDÉNTICO A INDEX.HTML) ===== -->
+
+    <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
         <div class="container mx-auto px-4 lg:px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -445,7 +412,7 @@
                     <div class="flex items-center gap-2 mb-4">
                         <img src="/wikimedia chile logo.png" 
                              alt="Wikimedia Chile Logo" 
-                             class="h-9 w-auto bg-white p-1 rounded-sm"
+                             class="h-9 w-auto"
                              onerror="this.onerror=null;this.src='https://placehold.co/120x36/fff/333?text=WM+Chile';">
                     </div>
                     <p class="text-sm text-gray-400 leading-relaxed">
@@ -509,8 +476,6 @@
         </div>
     </footer>
 
-
-    <!-- ===== SCRIPT (IDÉNTICO A INDEX.HTML) ===== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
@@ -531,8 +496,7 @@
             const header = document.getElementById('main-header');
             const headerLogo = document.getElementById('header-logo');
 
-            // --- Lógica del Header ---
-            // Forzar el estado 'scrolled' (sólido) en páginas internas
+            // Forzar header scrolled
             if (header) {
                 header.classList.add('header-scrolled');
                 if(headerLogo) {
@@ -540,7 +504,7 @@
                 }
             }
 
-            // --- Lógica del Menú Móvil ---
+            // Menú Móvil
             if (mobileMenuButton && mobileMenu && closeMobileMenuButton) {
                 mobileMenuButton.addEventListener('click', () => {
                     mobileMenu.classList.remove('hidden');
@@ -551,7 +515,7 @@
                 });
             }
             
-            // --- Lógica del Modal de Búsqueda ---
+            // Buscador
             if (searchModal && closeSearchButton && openSearchButtons.length > 0) {
                 
                 function openSearch() {
@@ -581,9 +545,7 @@
                     }
                 });
             }
-
         });
     </script>
-
 </body>
 </html>

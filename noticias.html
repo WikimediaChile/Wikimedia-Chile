@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias - Wikimedia Chile</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -18,7 +15,8 @@
             -moz-osx-font-smoothing: grayscale;
             background-color: #ffffff; 
         }
-        /* --- HEADER (IDÉNTICO A INDEX.HTML) --- */
+        
+        /* --- HEADER STYLES --- */
         #main-header {
             transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
             color: #4B5563;
@@ -27,120 +25,100 @@
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
         }
-        #main-header .nav-link {
-            color: #4B5563;
-            text-shadow: none;
-            transition: color 0.3s ease;
-        }
-         #main-header .nav-link:hover {
-            color: #5748b5;
-         }
-        #main-header .cta-socio {
-            background-color: transparent;
-            border: 2px solid #E5E7EB;
-            color: #5748b5;
-            transition: all 0.3s ease-in-out;
-            font-weight: 600;
-        }
-        #main-header .cta-socio:hover {
-            background-color: #F3F4F6;
-        }
-        #main-header .cta-donar {
-            background-color: #5748b5;
-            border: 2px solid #5748b5;
-            color: white;
-            transition: all 0.3s ease-in-out;
-            font-weight: 600;
-        }
-        #main-header .cta-donar:hover {
-            background-color: #4a3f9a;
-            border-color: #4a3f9a;
-        }
-        #main-header.header-scrolled {
-            background-color: #ffffff; 
-            color: #4B5563;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-        #main-header.header-scrolled .nav-link {
-            color: #4B5563;
-            text-shadow: none;
-        }
-        #main-header.header-scrolled .nav-link:hover {
-            color: #5748b5;
-        }
-        #main-header.header-scrolled .cta-socio {
-            background-color: transparent;
-            border-color: #E5E7EB;
-            color: #5748b5;
-            font-weight: 600;
-        }
-        #main-header.header-scrolled .cta-socio:hover {
-            background-color: #F3F4F6;
-        }
-         #main-header.header-scrolled .cta-donar {
-            background-color: #5748b5;
-            color: white;
-            border-color: #5748b5;
-            font-weight: 600;
-        }
-        #main-header.header-scrolled .cta-donar:hover {
-            background-color: #4a3f9a;
-            border-color: #4a3f9a;
-        }
-        /* --- ESTILOS DE FONDOS DE SECCIÓN --- */
+        #main-header .nav-link { color: #4B5563; transition: color 0.3s ease; }
+        #main-header .nav-link:hover { color: #5748b5; }
+        #main-header .cta-socio { border: 2px solid #E5E7EB; color: #5748b5; font-weight: 600; transition: all 0.3s ease-in-out; }
+        #main-header .cta-socio:hover { background-color: #F3F4F6; }
+        #main-header .cta-donar { background-color: #5748b5; border: 2px solid #5748b5; color: white; font-weight: 600; transition: all 0.3s ease-in-out; }
+        #main-header .cta-donar:hover { background-color: #4a3f9a; border-color: #4a3f9a; }
+        #main-header.header-scrolled { background-color: #ffffff; color: #4B5563; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+
+        /* --- ESTILOS DECORATIVOS --- */
         .section-bg-ornament-dots {
             background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.6'%3E%3Ccircle cx='50' cy='50' r='5' /%3E%3Ccircle cx='35' cy='35' r='5' /%3E%3Ccircle cx='65' cy='35' r='5' /%3E%3Ccircle cx='35' cy='65' r='5' /%3E%3Ccircle cx='65' cy='65' r='5' /%3E%3Ccircle cx='50' cy='20' r='5' /%3E%3Ccircle cx='50' cy='80' r='5' /%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.4'%3E%3Ccircle cx='50' cy='50' r='4' /%3E%3Ccircle cx='35' cy='35' r='4' /%3E%3Ccircle cx='65' cy='35' r='4' /%3E%3Ccircle cx='35' cy='65' r='4' /%3E%3Ccircle cx='65' cy='65' r='4' /%3E%3Ccircle cx='50' cy='20' r='4' /%3E%3Ccircle cx='50' cy='80' r='4' /%3E%3C/g%3E%3C/svg%3E");
             background-size: 150px 150px;
-            background-position: center 20px;
+            background-position: center top;
         }
-        /* --- ESTILOS PARA TABS DE FILTRO (NUEVO DISEÑO) --- */
-        .filter-tab {
+
+        /* --- ANIMACIONES --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        
+        /* --- NUEVOS ESTILOS DE FILTROS (Limpios y no compactos) --- */
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .filter-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 9999px;
+            border: 2px solid #E5E7EB;
+            background-color: white;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .filter-input:focus {
+            outline: none;
+            border-color: #5748b5;
+            box-shadow: 0 0 0 4px rgba(87, 72, 181, 0.1);
+        }
+
+        .category-pills-container {
             display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .filter-tab {
+            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1rem;
-            font-size: 0.875rem; 
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem; 
             font-weight: 600;
-            border-radius: 0.75rem; /* rounded-xl */
-            background-color: #F9FAFB; /* bg-gray-50 */
-            color: #374151; /* text-gray-700 */
+            border-radius: 9999px;
+            background-color: #ffffff;
+            color: #4B5563;
+            border: 1px solid #E5E7EB;
             transition: all 0.2s ease-in-out;
             cursor: pointer;
-            border: 1px solid #F3F4F6; /* border-gray-100 */
         }
         .filter-tab:hover {
-            background-color: #F3F4F6; /* hover:bg-gray-100 */
-            border-color: #E5E7EB; /* hover:border-gray-200 */
+            border-color: #5748b5;
+            color: #5748b5;
+            transform: translateY(-1px);
         }
         .filter-tab.active {
-            background-color: #5748b5; /* Color morado */
+            background-color: #5748b5; /* Azul/Morado Wiki */
             color: #FFFFFF;
             border-color: #5748b5;
+            box-shadow: 0 4px 10px -2px rgba(87, 72, 181, 0.3);
         }
-        .filter-tab.active svg {
-            color: #FFFFFF;
-        }
-        /* --- ESTILOS PAGINACIÓN --- */
+        
+        /* --- PAGINACIÓN --- */
         .pagination-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 2.5rem; /* w-10 */
-            height: 2.5rem; /* h-10 */
-            font-weight: 500; /* medium */
-            color: #374151; /* text-gray-700 */
+            width: 2.75rem;
+            height: 2.75rem;
+            font-weight: 600;
+            color: #4B5563;
             background-color: #ffffff;
             border: 1px solid #E5E7EB;
-            border-radius: 0.5rem; /* rounded-lg */
+            border-radius: 0.5rem;
             transition: all 0.2s ease-in-out;
             cursor: pointer;
         }
-        .pagination-link:hover {
-            background-color: #F9FAFB; /* hover:bg-gray-50 */
-        }
+        .pagination-link:hover { background-color: #F9FAFB; border-color: #D1D5DB; }
         .pagination-link.active {
             background-color: #5748b5;
             border-color: #5748b5;
@@ -148,22 +126,16 @@
             cursor: default;
         }
         .pagination-link.disabled {
-            color: #D1D5DB; /* text-gray-300 */
-            background-color: #F9FAFB; /* bg-gray-50 */
+            color: #9CA3AF;
+            background-color: #F3F4F6;
             cursor: not-allowed;
-        }
-        .pagination-ellipsis {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.5rem;
-            height: 2.5rem;
-            color: #6B7280; /* text-gray-500 */
+            border-color: #E5E7EB;
         }
     </style>
 </head>
 <body class="bg-white text-gray-800">
 
+    <!-- HEADER UNIFICADO -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 header-scrolled">
         <nav class="container mx-auto px-6 lg:px-8 py-5">
             <div class="flex justify-between items-center">
@@ -180,6 +152,7 @@
                 <div class="hidden lg:flex flex-1 justify-center items-center gap-8">
                     <a href="sobre-nosotros.html" class="nav-link font-medium">Sobre Nosotros</a>
                     <a href="programas.html" class="nav-link font-medium">Programas</a>
+                    <!-- Link Activo -->
                     <a href="noticias.html" class="nav-link font-medium text-blue-600">Noticias</a>
                     <a href="agenda.html" class="nav-link font-medium">Agenda</a>
                     <button id="search-button-desktop" class="nav-link" aria-label="Abrir búsqueda">
@@ -203,12 +176,10 @@
             </div>
         </nav>
         
-        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-50 p-6">
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-50 p-6" style="background-color: white;">
             <div class="flex justify-between items-center mb-8">
-                <img src="/wikiemdia foundation logo.webp" 
-                     alt="Wikimedia Chile Logo" 
-                     class="h-9 w-auto"
-                     onerror="this.onerror=null;this.src='https://placehold.co/120x36/333/fff?text=WM+Chile';">
+                <img src="/wikiemdia foundation logo.webp" alt="Wikimedia Chile Logo" class="h-9 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/120x36/333/fff?text=WM+Chile';">
                 <button id="close-mobile-menu" class="text-gray-700 p-2" aria-label="Cerrar menú">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
@@ -219,15 +190,14 @@
                 <a href="programas.html" class="block text-xl text-gray-700 hover:text-blue-600 font-medium py-2">Programas</a>
                 <a href="noticias.html" class="block text-xl text-blue-600 font-semibold py-2">Noticias</a>
                 <a href="agenda.html" class="block text-xl text-gray-700 hover:text-blue-600 font-medium py-2">Agenda</a>
-                
                 <hr class="my-4">
-                
                 <a href="hazte-socio.html" class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-base px-5 py-3 text-center transition-colors">Hazte Socio/a</a>
                 <a href="donar.html" class="text-gray-700 bg-gray-100 hover:bg-gray-200 font-medium rounded-lg text-base px-5 py-3 text-center transition-colors">Donar</a>
             </div>
         </div>
     </header>
 
+    <!-- Modal de Búsqueda Global -->
     <div id="search-modal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-start justify-center pt-20 md:pt-32 p-4">
         <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl relative" id="search-modal-content">
             <button id="close-search-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600" aria-label="Cerrar búsqueda">
@@ -244,341 +214,250 @@
             </div>
         </div>
     </div>
-    
+
     <main>
-        
-        <section class="relative pt-48 pb-32 text-center text-white overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80" 
-                 alt="Persona leyendo noticias en una tablet" 
-                 class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/60"></div>
-            <div class="container mx-auto px-4 lg:px-6 relative z-10">
-                <h1 class="text-4xl lg:text-5xl font-extrabold !leading-tight tracking-tight drop-shadow-xl">
-                    Noticias y <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-400">Novedades</span>
-                </h1>
-                <p class="mt-6 text-lg text-gray-200 max-w-3xl mx-auto drop-shadow-lg">
-                    Mantente al día con nuestras actividades, comunicados y columnas de opinión.
-                </p>
-            </div>
+        <!-- BANNER UNIFICADO (Sin texto, igual a Programas) -->
+        <section class="relative pt-20 h-[400px] md:h-[450px] flex items-center justify-center bg-gray-100 overflow-hidden">
+            <img src="banner.png" 
+                 alt="Banner Noticias" 
+                 class="w-full h-full object-cover object-center" 
+                 onerror="this.src='https://placehold.co/1920x600/eee/999?text=Banner+Noticias';">
         </section>
 
-        <div class="py-8 md:py-12">
+        <!-- BREADCRUMBS -->
+        <div class="py-8 md:py-10">
             <div class="container mx-auto px-4 lg:px-6">
                 <nav class="flex justify-center" aria-label="Breadcrumb">
                     <ol role="list" class="flex items-center space-x-2">
                         <li>
-                            <div>
-                                <a href="index.html" class="text-gray-400 hover:text-gray-600 transition-colors">
-                                    <svg class="h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 10.707V17a1 1 0 01-1 1h-3a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V10.707a1 1 0 01.293-.707l7-7z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span class="sr-only">Inicio</span>
-                                </a>
-                            </div>
+                            <a href="index.html" class="text-gray-400 hover:text-gray-600 transition-colors">
+                                <svg class="h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 10.707V17a1 1 0 01-1 1h-3a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V10.707a1 1 0 01.293-.707l7-7z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="sr-only">Inicio</span>
+                            </a>
                         </li>
                         <li>
                             <div class="flex items-center">
                                 <svg class="h-5 w-5 flex-shrink-0 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                                 </svg>
-                                <a href="noticias.html" class="ml-2 text-sm font-medium text-gray-600 hover:text-gray-900" aria-current="page">Noticias</a>
+                                <span class="ml-2 text-sm font-bold text-blue-600" aria-current="page">Noticias</span>
                             </div>
                         </li>
                     </ol>
                 </nav>
-                <div class="flex items-center justify-center space-x-4 max-w-lg mx-auto mt-8">
-                    <div class="h-px flex-grow rounded-full" style="background: linear-gradient(to left, #5748b5, #308557, #0e65c0); opacity: 0.3;"></div>
-                    <div class="flex-shrink-0 flex gap-3 items-center">
-                        <svg class="w-5 h-5" style="color: #0e65c0;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-7 h-7" style="color: #5748b5;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-5 h-5" style="color: #308557;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                    </div>
-                    <div class="h-px flex-grow rounded-full" style="background: linear-gradient(to right, #5748b5, #308557, #0e65c0); opacity: 0.3;"></div>
-                </div>
             </div>
         </div>
         
-        <section class="py-16 md:py-24 section-bg-ornament-dots">
+        <!-- SECCIÓN DE CONTENIDO PRINCIPAL -->
+        <section class="pt-4 pb-16 md:pb-24 section-bg-ornament-dots">
             <div class="container mx-auto px-4 lg:px-6">
                 
-                <div class="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                    
-                    <div class="lg:col-span-2 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                        <label for="search-news" class="block text-sm font-bold text-gray-800 mb-2">Buscar Noticias</label>
-                        <div class="flex flex-col md:flex-row gap-4">
-                            <div class="flex-grow relative">
-                                <input type="text" id="search-news" placeholder="Buscar por palabra clave..." class="w-full rounded-lg border-gray-300 shadow-sm pl-10 pr-4 py-3 focus:border-blue-500 focus:ring-blue-500">
-                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                                </div>
-                            </div>
-                            <div class="flex-shrink-0">
-                                <select id="filter-year" class="w-full md:w-auto rounded-lg border-gray-300 shadow-sm py-3 h-full px-4 focus:border-blue-500 focus:ring-blue-500">
-                                    <option value="todos">Todos los años</option>
-                                    <option value="2025" selected>2025</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2023">2023</option>
-                                </select>
-                            </div>
+                <!-- Título Principal (Movido aquí) -->
+                <div class="text-center mb-10 animate-fade-in-up">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600">ACTUALIDAD</span>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-2">Noticias y Novedades</h1>
+                </div>
+
+                <!-- Filtros Rediseñados (Diseño Centrado y Limpio) -->
+                <div class="search-container mb-16 animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <!-- Barra de Búsqueda -->
+                    <div class="relative mb-6">
+                        <input type="text" id="search-news" placeholder="Buscar noticias..." class="filter-input">
+                        <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         </div>
                     </div>
-
-                    <div class="lg:col-span-1 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                        <label class="block text-sm font-bold text-gray-800 mb-3">Categorías</label>
-                        <div id="category-filters" class="flex flex-wrap gap-2 justify-start">
-                            <button class="filter-tab active" data-category="todas">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
-                                <span>Todas</span>
-                            </button>
-                            <button class="filter-tab" data-category="comunidad">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-4.682 2.72a3 3 0 01-4.682-2.72 9.094 9.094 0 013.741.479m-3.741-.479a9.094 9.094 0 00-3.741.479 3 3 0 004.682 2.72M12 12.75a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                <span>Comunidad</span>
-                            </button>
-                            <button class="filter-tab" data-category="cultura">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M8.25 21h7.5M12 6v15m0 0v-4.5m0 4.5v-4.5m0 4.5L15 12m-3 9l-3-7.5" /></svg>
-                                <span>Cultura</span>
-                            </button>
-                            <button class="filter-tab" data-category="educacion">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" /></svg>
-                                <span>Educación</span>
-                            </button>
-                            <button class="filter-tab" data-category="opinion">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.353-.026.715-.042 1.074-.042h2.34c.359 0 .721.016 1.074.042 1.131.094 1.976 1.057 1.976 2.192v1.392M8.25 7.5h7.5m-7.5 3H12m-3.75 3h7.5M14.25 15h3.375c.621 0 1.125-.504 1.125-1.125V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08A48.52 48.52 0 0012 3.75c-.621 0-1.242.015-1.853.042A2.25 2.25 0 008.25 6.108v8.784c0 .621.504 1.125 1.125 1.125h3.375z" /></svg>
-                                <span>Opinión</span>
-                            </button>
-                            <button class="filter-tab" data-category="general">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
-                                <span>General</span>
-                            </button>
+                    
+                    <!-- Filtros (Pills) y Año -->
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                        <div id="category-filters" class="flex flex-wrap justify-center gap-2">
+                            <button class="filter-tab active" data-category="todas">Todas</button>
+                            <button class="filter-tab" data-category="comunidad">Comunidad</button>
+                            <button class="filter-tab" data-category="cultura">Cultura</button>
+                            <button class="filter-tab" data-category="educacion">Educación</button>
+                            <button class="filter-tab" data-category="opinion">Opinión</button>
+                        </div>
+                        
+                        <!-- Separador vertical en desktop -->
+                        <div class="hidden md:block w-px h-8 bg-gray-200"></div>
+                        
+                        <div class="relative">
+                            <select id="filter-year" class="appearance-none bg-white border border-gray-300 text-gray-700 py-2 pl-4 pr-8 rounded-full font-semibold cursor-pointer focus:outline-none focus:border-blue-500 hover:bg-gray-50 transition-colors">
+                                <option value="todos">Todos los años</option>
+                                <option value="2025" selected>2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Grilla de Noticias -->
+                <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
                     
-                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5" data-category="comunidad" data-year="2025">
-                        <a href="noticia-detalle.html" class="block">
-                            <div class="relative">
+                    <!-- Noticia 1 -->
+                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-md overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="comunidad" data-year="2025">
+                        <a href="noticia-detalle.html" class="flex flex-col h-full">
+                            <div class="relative overflow-hidden">
                                 <div class="aspect-video">
-                                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
-                                         alt="[Imagen de la noticia 1]"
-                                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/777/fff?text=Noticia';">
+                                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Noticia 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                 </div>
-                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-blue-800 bg-blue-100">Comunidad</span>
+                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-blue-700 bg-blue-50 border border-blue-100 shadow-sm">Comunidad</span>
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <div class="flex items-center gap-2 text-sm font-medium text-gray-500">
-                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                                    <span>25 Octubre, 2025</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2 leading-tight transition-colors group-hover:text-blue-600">Wiki Loves Monuments 2025 cierra con éxito</h3>
-                                <p class="text-gray-600 text-sm mb-6 flex-grow">
-                                    El concurso de fotografía de monumentos más grande del mundo finalizó su versión 2025...
-                                </p>
-                                <span class="text-sm font-semibold mt-auto" style="color: #5748b5;">
-                                    Leer más &rarr;
-                                </span>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">25 Octubre, 2025</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">Wiki Loves Monuments 2025 cierra con éxito</h3>
+                                <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">El concurso de fotografía de monumentos más grande del mundo finalizó su versión 2025 con récord de participación...</p>
+                                <span class="text-sm font-bold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition-all">Leer más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                             </div>
                         </a>
                     </article>
                     
-                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5" data-category="cultura" data-year="2025">
-                        <a href="noticia-detalle.html" class="block">
-                            <div class="relative">
+                    <!-- Noticia 2 -->
+                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-md overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="cultura" data-year="2025">
+                        <a href="noticia-detalle.html" class="flex flex-col h-full">
+                            <div class="relative overflow-hidden">
                                 <div class="aspect-video">
-                                    <img src="https://images.unsplash.com/photo-1600880292203-94266e50431b?auto=format&fit=crop&w=800&q=80"
-                                         alt="[Imagen de la noticia 2]"
-                                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/777/fff?text=Noticia';">
+                                    <img src="https://images.unsplash.com/photo-1600880292203-94266e50431b?auto=format&fit=crop&w=800&q=80" alt="Noticia 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                 </div>
-                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-green-800 bg-green-100">Cultura</span>
+                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-green-700 bg-green-50 border border-green-100 shadow-sm">Cultura</span>
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <div class="flex items-center gap-2 text-sm font-medium text-gray-500">
-                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                                    <span>18 Octubre, 2025</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2 leading-tight transition-colors group-hover:text-blue-600">Wikimedia se suma al Día del Patrimonio</h3>
-                                <p class="text-gray-600 text-sm mb-6 flex-grow">
-                                    Nuevas alianzas con museos regionales permiten la liberación de cientos de archivos...
-                                </p>
-                                <span class="text-sm font-semibold mt-auto" style="color: #5748b5;">
-                                    Leer más &rarr;
-                                </span>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">18 Octubre, 2025</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">Wikimedia se suma al Día del Patrimonio</h3>
+                                <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">Nuevas alianzas con museos regionales permiten la liberación de cientos de archivos históricos para el dominio público...</p>
+                                <span class="text-sm font-bold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition-all">Leer más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                             </div>
                         </a>
                     </article>
 
-                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5" data-category="educacion" data-year="2024">
-                        <a href="noticia-detalle.html" class="block">
-                            <div class="relative">
+                    <!-- Noticia 3 -->
+                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-md overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="educacion" data-year="2024">
+                        <a href="noticia-detalle.html" class="flex flex-col h-full">
+                            <div class="relative overflow-hidden">
                                 <div class="aspect-video">
-                                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
-                                         alt="[Imagen de la noticia 3]"
-                                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/777/fff?text=Noticia';">
+                                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Noticia 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                 </div>
-                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-purple-800 bg-purple-100">Educación</span>
+                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-purple-700 bg-purple-50 border border-purple-100 shadow-sm">Educación</span>
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <div class="flex items-center gap-2 text-sm font-medium text-gray-500">
-                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                                    <span>10 Octubre, 2024</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2 leading-tight transition-colors group-hover:text-blue-600">Taller de edición en la Universidad de Chile</h3>
-                                <p class="text-gray-600 text-sm mb-6 flex-grow">
-                                    Estudiantes de periodismo aprendieron a editar en Wikipedia con un enfoque en...
-                                </p>
-                                <span class="text-sm font-semibold mt-auto" style="color: #5748b5;">
-                                    Leer más &rarr;
-                                </span>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">10 Octubre, 2024</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">Taller de edición en la Universidad de Chile</h3>
+                                <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">Estudiantes de periodismo aprendieron a editar en Wikipedia con un enfoque en fuentes fiables y neutralidad...</p>
+                                <span class="text-sm font-bold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition-all">Leer más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                             </div>
                         </a>
                     </article>
 
-                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5" data-category="opinion" data-year="2024">
-                        <a href="noticia-detalle.html" class="block">
-                            <div class="relative">
+                    <!-- Noticia 4 -->
+                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-md overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="opinion" data-year="2024">
+                        <a href="noticia-detalle.html" class="flex flex-col h-full">
+                            <div class="relative overflow-hidden">
                                 <div class="aspect-video">
-                                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80"
-                                         alt="[Imagen de la noticia 4]"
-                                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/777/fff?text=Noticia';">
+                                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Noticia 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                 </div>
-                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-red-800 bg-red-100">Opinión</span>
+                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-red-700 bg-red-50 border border-red-100 shadow-sm">Opinión</span>
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <div class="flex items-center gap-2 text-sm font-medium text-gray-500">
-                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                                    <span>02 Octubre, 2024</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2 leading-tight transition-colors group-hover:text-blue-600">La importancia de la reforma al derecho de autor</h3>
-                                <p class="text-gray-600 text-sm mb-6 flex-grow">
-                                    Columna de nuestra Directora Ejecutiva sobre el proyecto de ley que se discute en...
-                                </p>
-                                <span class="text-sm font-semibold mt-auto" style="color: #5748b5;">
-                                    Leer más &rarr;
-                                </span>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">02 Octubre, 2024</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">La importancia de la reforma al derecho de autor</h3>
+                                <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">Columna de nuestra Directora Ejecutiva sobre el proyecto de ley que se discute en el congreso y sus implicancias...</p>
+                                <span class="text-sm font-bold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition-all">Leer más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                             </div>
                         </a>
                     </article>
 
-                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5" data-category="general" data-year="2023">
-                        <a href="noticia-detalle.html" class="block">
-                            <div class="relative">
+                    <!-- Noticia 5 -->
+                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-md overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="general" data-year="2023">
+                        <a href="noticia-detalle.html" class="flex flex-col h-full">
+                            <div class="relative overflow-hidden">
                                 <div class="aspect-video">
-                                    <img src="https://placehold.co/800x450/99e6b4/166534?text=Noticia+5"
-                                         alt="[Imagen de la noticia 5]"
-                                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/777/fff?text=Noticia';">
+                                    <img src="https://placehold.co/800x450/99e6b4/166534?text=Encuesta+2023" alt="Noticia 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                 </div>
-                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-gray-800 bg-gray-100">General</span>
+                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-gray-700 bg-gray-100 border border-gray-200 shadow-sm">General</span>
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <div class="flex items-center gap-2 text-sm font-medium text-gray-500">
-                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                                    <span>28 Septiembre, 2023</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2 leading-tight transition-colors group-hover:text-blue-600">Resultados Encuesta Anual de Comunidad</h3>
-                                <p class="text-gray-600 text-sm mb-6 flex-grow">
-                                    Revisa los principales hallazgos y conclusiones de nuestra encuesta de comunidad 2023.
-                                </p>
-                                <span class="text-sm font-semibold mt-auto" style="color: #5748b5;">
-                                    Leer más &rarr;
-                                </span>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">28 Septiembre, 2023</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">Resultados Encuesta Anual de Comunidad</h3>
+                                <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">Revisa los principales hallazgos y conclusiones de nuestra encuesta de comunidad 2023...</p>
+                                <span class="text-sm font-bold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition-all">Leer más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                             </div>
                         </a>
                     </article>
 
-                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5" data-category="opinion" data-year="2023">
-                        <a href="noticia-detalle.html" class="block">
-                            <div class="relative">
+                    <!-- Noticia 6 -->
+                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-md overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="opinion" data-year="2023">
+                        <a href="noticia-detalle.html" class="flex flex-col h-full">
+                            <div class="relative overflow-hidden">
                                 <div class="aspect-video">
-                                    <img src="https://placehold.co/800x450/fca5a5/7f1d1d?text=Noticia+6"
-                                         alt="[Imagen de la noticia 6]"
-                                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/777/fff?text=Noticia';">
+                                    <img src="https://placehold.co/800x450/fca5a5/7f1d1d?text=IA+y+Wiki" alt="Noticia 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                 </div>
-                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-red-800 bg-red-100">Opinión</span>
+                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-red-700 bg-red-50 border border-red-100 shadow-sm">Opinión</span>
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <div class="flex items-center gap-2 text-sm font-medium text-gray-500">
-                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                                    <span>15 Septiembre, 2023</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2 leading-tight transition-colors group-hover:text-blue-600">IA y Conocimiento Libre: Desafíos y Futuro</h3>
-                                <p class="text-gray-600 text-sm mb-6 flex-grow">
-                                    Una reflexión sobre el rol de los modelos de lenguaje en el ecosistema de Wikimedia.
-                                </p>
-                                <span class="text-sm font-semibold mt-auto" style="color: #5748b5;">
-                                    Leer más &rarr;
-                                </span>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- Noticia 7 (Ejemplo para paginación) -->
-                    <article class="news-article flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5" data-category="comunidad" data-year="2023">
-                        <a href="noticia-detalle.html" class="block">
-                            <div class="relative">
-                                <div class="aspect-video">
-                                    <img src="https://placehold.co/800x450/bfdbfe/1e3a8a?text=Noticia+7"
-                                         alt="[Imagen de la noticia 7]"
-                                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/777/fff?text=Noticia';">
-                                </div>
-                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-blue-800 bg-blue-100">Comunidad</span>
-                            </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <div class="flex items-center gap-2 text-sm font-medium text-gray-500">
-                                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                                    <span>10 Agosto, 2023</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2 leading-tight transition-colors group-hover:text-blue-600">Nueva Directiva de Wikimedia Chile</h3>
-                                <p class="text-gray-600 text-sm mb-6 flex-grow">
-                                    Tras la asamblea general de socios, se ha elegido a la nueva directiva para el período 2023-2025.
-                                </p>
-                                <span class="text-sm font-semibold mt-auto" style="color: #5748b5;">
-                                    Leer más &rarr;
-                                </span>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">15 Septiembre, 2023</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">IA y Conocimiento Libre: Desafíos y Futuro</h3>
+                                <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">Una reflexión sobre el rol de los modelos de lenguaje en el ecosistema de Wikimedia y su impacto...</p>
+                                <span class="text-sm font-bold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition-all">Leer más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                             </div>
                         </a>
                     </article>
                     
-                    <div id="no-results-message" class="hidden text-center col-span-full py-16">
-                        <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
-                        <h3 class="text-2xl font-semibold text-gray-900">Sin resultados</h3>
-                        <p class="mt-2 text-gray-600">No se encontraron noticias que coincidan con tus filtros. Intenta con otra combinación.</p>
+                     <!-- Noticia 7 (Extra para paginación) -->
+                     <article class="news-article flex flex-col bg-white rounded-2xl shadow-md overflow-hidden group border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="comunidad" data-year="2023">
+                        <a href="noticia-detalle.html" class="flex flex-col h-full">
+                            <div class="relative overflow-hidden">
+                                <div class="aspect-video">
+                                    <img src="https://placehold.co/800x450/bfdbfe/1e3a8a?text=Nueva+Directiva" alt="Noticia 7" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                </div>
+                                <span class="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full text-blue-700 bg-blue-50 border border-blue-100 shadow-sm">Comunidad</span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">10 Agosto, 2023</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">Nueva Directiva de Wikimedia Chile</h3>
+                                <p class="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">Tras la asamblea general de socios, se ha elegido a la nueva directiva para el período 2023-2025.</p>
+                                <span class="text-sm font-bold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition-all">Leer más <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Mensaje Sin Resultados -->
+                    <div id="no-results-message" class="hidden col-span-full text-center py-20">
+                        <div class="inline-block p-4 rounded-full bg-gray-50 mb-4">
+                            <svg class="w-12 h-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">No se encontraron noticias</h3>
+                        <p class="mt-2 text-gray-500">Intenta ajustar los filtros o buscar con otros términos.</p>
                     </div>
 
                 </div>
 
-                <nav id="pagination-nav" class="mt-16 flex justify-center items-center space-x-2" aria-label="Paginación">
-                    <!-- Los botones de paginación se generarán aquí con JavaScript -->
+                <!-- Paginación -->
+                <nav id="pagination-nav" class="mt-16 flex justify-center items-center space-x-2 animate-fade-in-up" style="animation-delay: 0.2s;" aria-label="Paginación">
+                    <!-- Botones generados por JS -->
                 </nav>
 
             </div>
         </section>
-        
     </main>
     
+    <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
         <div class="container mx-auto px-4 lg:px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                
                 <div>
                     <div class="flex items-center gap-2 mb-4">
-                        <img src="/wikimedia chile logo.png" 
-                             alt="Wikimedia Chile Logo" 
-                             class="h-9 w-auto bg-white p-1 rounded-sm"
-                             onerror="this.onerror=null;this.src='https://placehold.co/120x36/fff/333?text=WM+Chile';">
+                        <img src="/wikimedia chile logo.png" alt="Wikimedia Chile Logo" class="h-9 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/120x36/fff/333?text=WM+Chile';">
                     </div>
                     <p class="text-sm text-gray-400 leading-relaxed">
                         Promoviendo el conocimiento libre y la cultura abierta en Chile como el capítulo local de la Fundación Wikimedia.
                     </p>
                 </div>
-                
                 <div>
                     <h5 class="text-base font-semibold text-white mb-4">Navegación</h5>
                     <ul class="space-y-3">
@@ -589,7 +468,6 @@
                         <li><a href="hazte-socio.html" class="text-sm hover:text-white transition-colors">Hazte Socio/a</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h5 class="text-base font-semibold text-white mb-4">Enlaces Útiles</h5>
                     <ul class="space-y-3">
@@ -600,77 +478,47 @@
                         <li><a href="contacto.html" class="text-sm hover:text-white transition-colors">Contacto</a></li>
                     </ul>
                 </div>
-                
-                <div id="footer-subscribe">
+                <div>
                     <h5 class="text-base font-semibold text-white mb-4">Conéctate</h5>
                     <div class="flex gap-4 mb-6">
-                        <a href="https://www.instagram.com/wikimedia_cl/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </a>
-                        <a href="https://www.facebook.com/WikimediaCL/?locale=es_LA" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/company/wikimedia-chile/posts/?feedView=all" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a>
+                        <a href="https://www.instagram.com/wikimedia_cl/" target="_blank" class="text-gray-400 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="https://www.facebook.com/WikimediaCL/?locale=es_LA" target="_blank" class="text-gray-400 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="https://www.linkedin.com/company/wikimedia-chile/posts/?feedView=all" target="_blank" class="text-gray-400 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                     </div>
                     <h5 class="text-base font-semibold text-white mb-4 mt-8">Suscríbete</h5>
                     <form class="flex gap-2">
-                        <input type="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="tu.correo@ejemplo.com" aria-label="Correo electrónico para suscripción">
-                        <button type="submit" class="text-white font-medium rounded-lg text-sm px-4 py-2 transition-colors" style="background-color: #5748b5; hover:background-color: #4a3f9a;" aria-label="Suscribirse">
-                            &rarr;
-                        </button>
+                        <input type="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="tu.correo@ejemplo.com">
+                        <button type="submit" class="text-white font-medium rounded-lg text-sm px-4 py-2 transition-colors" style="background-color: #5748b5; hover:background-color: #4a3f9a;">&rarr;</button>
                     </form>
                 </div>
             </div>
-            
             <hr class="border-gray-700 my-8">
-            
             <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
                 <p>&copy; 2024 Wikimedia Chile. Todos los derechos reservados.</p>
-                <p class="mt-4 md:mt-0">
-                    El contenido está disponible bajo <a href="#" class="hover:text-white underline">CC BY-SA 4.0</a> salvo que se indique lo contrario.
-                </p>
+                <p class="mt-4 md:mt-0">El contenido está disponible bajo <a href="#" class="hover:text-white underline">CC BY-SA 4.0</a> salvo que se indique lo contrario.</p>
             </div>
         </div>
     </footer>
 
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
-            const darkLogo = '/wikiemdia foundation logo.webp'; 
-
+            const darkLogo = '/wikiemdia foundation logo.webp';
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const closeMobileMenuButton = document.getElementById('close-mobile-menu');
-            
             const searchModal = document.getElementById('search-modal');
-            const openSearchButtons = [
-                document.getElementById('search-button-desktop'), 
-                document.getElementById('search-button-mobile')
-            ];
+            const openSearchButtons = [document.getElementById('search-button-desktop'), document.getElementById('search-button-mobile')];
             const closeSearchButton = document.getElementById('close-search-modal');
-            const searchInputModal = document.getElementById('search-input-modal'); 
-            
+            const searchInputModal = document.getElementById('search-input-modal');
             const header = document.getElementById('main-header');
             const headerLogo = document.getElementById('header-logo');
 
-            if (header) {
-                header.classList.add('header-scrolled');
-            }
-            if(headerLogo) {
-                headerLogo.src = darkLogo;
-            }
+            if (header) header.classList.add('header-scrolled');
+            if(headerLogo) headerLogo.src = darkLogo;
 
             if (mobileMenuButton && mobileMenu && closeMobileMenuButton) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.remove('hidden');
-                });
-                
-                closeMobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
+                mobileMenuButton.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+                closeMobileMenuButton.addEventListener('click', () => mobileMenu.classList.add('hidden'));
             }
             
             if (searchModal && closeSearchButton && openSearchButtons.length > 0) {
@@ -681,38 +529,24 @@
                 function closeSearch() {
                     searchModal.classList.add('hidden');
                 }
-                openSearchButtons.forEach(btn => {
-                    if(btn) btn.addEventListener('click', openSearch);
-                });
+                openSearchButtons.forEach(btn => btn && btn.addEventListener('click', openSearch));
                 closeSearchButton.addEventListener('click', closeSearch);
-                searchModal.addEventListener('click', (e) => {
-                    if (e.target === searchModal) {
-                        closeSearch();
-                    }
-                });
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
-                        closeSearch();
-                    }
-                });
+                searchModal.addEventListener('click', (e) => { if (e.target === searchModal) closeSearch(); });
+                document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) closeSearch(); });
             }
 
-            // --- LÓGICA DE FILTRADO Y PAGINACIÓN DE NOTICIAS ---
-
+            // Lógica de Filtros y Paginación
             const categoryTabs = document.querySelectorAll('.filter-tab');
             const yearSelect = document.getElementById('filter-year');
             const searchInput = document.getElementById('search-news');
             const articles = Array.from(document.querySelectorAll('.news-article'));
             const noResultsMessage = document.getElementById('no-results-message');
             const paginationNav = document.getElementById('pagination-nav');
-            
-            const itemsPerPage = 6; // Mostrar 6 noticias por página
+            const itemsPerPage = 6;
             let currentPage = 1;
 
             function filterAndPaginate(isPageClick = false) {
-                if (!isPageClick) {
-                    currentPage = 1;
-                }
+                if (!isPageClick) currentPage = 1;
                 
                 const currentCategory = document.querySelector('.filter-tab.active').dataset.category;
                 const currentYear = yearSelect.value;
@@ -738,126 +572,75 @@
 
             function displayPage(visibleArticles) {
                 articles.forEach(article => article.style.display = 'none');
-                
                 const startIndex = (currentPage - 1) * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
                 const pageArticles = visibleArticles.slice(startIndex, endIndex);
+                pageArticles.forEach(article => article.style.display = 'flex'); // Use flex to keep card layout correct
                 
-                pageArticles.forEach(article => article.style.display = 'flex');
-
-                if (visibleArticles.length === 0) {
-                    noResultsMessage.style.display = 'block';
-                } else {
-                    noResultsMessage.style.display = 'none';
-                }
+                noResultsMessage.style.display = visibleArticles.length === 0 ? 'block' : 'none';
             }
 
             function setupPagination(totalItems) {
                 paginationNav.innerHTML = '';
                 const totalPages = Math.ceil(totalItems / itemsPerPage);
-
                 if (totalPages <= 1) {
                     paginationNav.style.display = 'none';
                     return;
                 }
-
                 paginationNav.style.display = 'flex';
 
-                // Botón "Anterior"
-                paginationNav.appendChild(createPaginationButton(
-                    'prev', 
-                    '&lt;', 
-                    currentPage === 1,
-                    () => {
-                        if (currentPage > 1) {
-                            currentPage--;
-                            filterAndPaginate(true);
-                        }
-                    }
-                ));
+                paginationNav.appendChild(createPaginationButton('prev', '<', currentPage === 1, () => {
+                    if (currentPage > 1) { currentPage--; filterAndPaginate(true); }
+                }));
 
-                // Lógica de "..."
                 let startPage = Math.max(1, currentPage - 1);
                 let endPage = Math.min(totalPages, currentPage + 1);
-
-                if (currentPage === 1) {
-                    endPage = Math.min(totalPages, 3);
-                }
-                if (currentPage === totalPages) {
-                    startPage = Math.max(1, totalPages - 2);
-                }
+                if (currentPage === 1) endPage = Math.min(totalPages, 3);
+                if (currentPage === totalPages) startPage = Math.max(1, totalPages - 2);
 
                 if (startPage > 1) {
-                    paginationNav.appendChild(createPaginationButton(1, '1', false, () => {
-                        currentPage = 1;
-                        filterAndPaginate(true);
-                    }));
-                    if (startPage > 2) {
-                        const ellipsis = document.createElement('span');
-                        ellipsis.className = 'pagination-ellipsis';
-                        ellipsis.innerHTML = '...';
-                        paginationNav.appendChild(ellipsis);
-                    }
+                    paginationNav.appendChild(createPaginationButton(1, '1', false, () => { currentPage = 1; filterAndPaginate(true); }));
+                    if (startPage > 2) paginationNav.appendChild(createEllipsis());
                 }
 
                 for (let i = startPage; i <= endPage; i++) {
-                    paginationNav.appendChild(createPaginationButton(
-                        i, 
-                        i, 
-                        i === currentPage,
-                        () => {
-                            currentPage = i;
-                            filterAndPaginate(true);
-                        }
-                    ));
+                    paginationNav.appendChild(createPaginationButton(i, i, i === currentPage, () => { currentPage = i; filterAndPaginate(true); }));
                 }
 
                 if (endPage < totalPages) {
-                    if (endPage < totalPages - 1) {
-                        const ellipsis = document.createElement('span');
-                        ellipsis.className = 'pagination-ellipsis';
-                        ellipsis.innerHTML = '...';
-                        paginationNav.appendChild(ellipsis);
-                    }
-                    paginationNav.appendChild(createPaginationButton(totalPages, totalPages, false, () => {
-                        currentPage = totalPages;
-                        filterAndPaginate(true);
-                    }));
+                    if (endPage < totalPages - 1) paginationNav.appendChild(createEllipsis());
+                    paginationNav.appendChild(createPaginationButton(totalPages, totalPages, false, () => { currentPage = totalPages; filterAndPaginate(true); }));
                 }
 
-                // Botón "Siguiente"
-                paginationNav.appendChild(createPaginationButton(
-                    'next', 
-                    '&gt;', 
-                    currentPage === totalPages,
-                    () => {
-                        if (currentPage < totalPages) {
-                            currentPage++;
-                            filterAndPaginate(true);
-                        }
-                    }
-                ));
+                paginationNav.appendChild(createPaginationButton('next', '>', currentPage === totalPages, () => {
+                    if (currentPage < totalPages) { currentPage++; filterAndPaginate(true); }
+                }));
             }
 
-            function createPaginationButton(key, text, isActive, onClick) {
+            function createPaginationButton(key, text, isActiveOrDisabled, onClick) {
                 const button = document.createElement('button');
                 button.className = 'pagination-link';
                 button.innerHTML = text;
-                if (isActive) {
+                
+                if (typeof key === 'number' && isActiveOrDisabled) {
                     button.classList.add('active');
                     button.setAttribute('aria-current', 'page');
-                }
-                if (key === 'prev' || key === 'next') {
-                    button.setAttribute('aria-label', key === 'prev' ? 'Página anterior' : 'Página siguiente');
-                }
-                if (isActive || (key === 'prev' && currentPage === 1) || (key === 'next' && currentPage === totalPages)) {
-                    if(key !== 'prev' && key !== 'next') button.disabled = true;
-                    if(key === 'prev' && currentPage === 1) button.classList.add('disabled');
-                    if(key === 'next' && currentPage === totalPages) button.classList.add('disabled');
                 } else {
                     button.addEventListener('click', onClick);
                 }
+
+                if ((key === 'prev' || key === 'next') && isActiveOrDisabled) {
+                    button.disabled = true;
+                    button.classList.add('disabled');
+                }
                 return button;
+            }
+
+            function createEllipsis() {
+                const span = document.createElement('span');
+                span.className = 'pagination-ellipsis';
+                span.innerHTML = '...';
+                return span;
             }
 
             categoryTabs.forEach(tab => {
@@ -874,6 +657,5 @@
             filterAndPaginate();
         });
     </script>
-
 </body>
 </html>

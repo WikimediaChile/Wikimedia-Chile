@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programas - Wikimedia Chile</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -18,6 +15,8 @@
             -moz-osx-font-smoothing: grayscale;
             background-color: #ffffff; 
         }
+        
+        /* --- ESTILOS DEL HEADER (Copiados exactos de Sobre Nosotros) --- */
         #main-header {
             transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
             color: #4B5563;
@@ -31,9 +30,9 @@
             text-shadow: none;
             transition: color 0.3s ease;
         }
-         #main-header .nav-link:hover {
+        #main-header .nav-link:hover {
             color: #5748b5;
-         }
+        }
         #main-header .cta-socio {
             background-color: transparent;
             border: 2px solid #E5E7EB;
@@ -55,6 +54,7 @@
             background-color: #4a3f9a;
             border-color: #4a3f9a;
         }
+        /* Header Scrolled forzado */
         #main-header.header-scrolled {
             background-color: #ffffff; 
             color: #4B5563;
@@ -62,82 +62,63 @@
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
         }
-        #main-header.header-scrolled .nav-link {
-            color: #4B5563;
-            text-shadow: none;
-        }
-        #main-header.header-scrolled .nav-link:hover {
-            color: #5748b5;
-        }
-        #main-header.header-scrolled .cta-socio {
-            background-color: transparent;
-            border-color: #E5E7EB;
-            color: #5748b5;
-            font-weight: 600;
-        }
-        #main-header.header-scrolled .cta-socio:hover {
-            background-color: #F3F4F6;
-        }
-         #main-header.header-scrolled .cta-donar {
-            background-color: #5748b5;
-            color: white;
-            border-color: #5748b5;
-            font-weight: 600;
-        }
-        #main-header.header-scrolled .cta-donar:hover {
-            background-color: #4a3f9a;
-            border-color: #4a3f9a;
-        }
-        .ornament-card {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
-        }
-        .ornament-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .ornament-bg {
-            position: absolute;
-            top: -20px;
-            right: -30px;
-            width: 150px;
-            height: 150px;
-            opacity: 0.15;
-            z-index: 1;
-        }
-        .section-bg-ornament-circles {
-            background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23e5e7eb' stroke-width='1'%3E%3Ccircle cx='50' cy='50' r='48' /%3E%3Ccircle cx='50' cy='50' r='38' /%3E%3Ccircle cx='50' cy='50' r='28' /%3E%3C/g%3E%3C/svg%3E");
-            background-size: 250px 250px;
-            background-position: center top;
-        }
-        .section-bg-ornament-stars {
-            background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23e5e7eb' stroke-width='1'%3E%3Cpath d='M50 0 V20 M50 100 V80 M0 50 H20 M100 50 H80 M35.857 35.857 L42.928 42.928 M64.143 64.143 L57.072 57.072 M35.857 64.143 L42.928 57.072 M64.143 35.857 L57.072 42.928' /%3E%3C/g%3E%3C/svg%3E");
-            background-size: 200px 200px;
-            background-position: center top;
-        }
+
+        /* --- ESTILOS DECORATIVOS --- */
         .section-bg-ornament-dots {
             background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.6'%3E%3Ccircle cx='50' cy='50' r='5' /%3E%3Ccircle cx='35' cy='35' r='5' /%3E%3Ccircle cx='65' cy='35' r='5' /%3E%3Ccircle cx='35' cy='65' r='5' /%3E%3Ccircle cx='65' cy='65' r='5' /%3E%3Ccircle cx='50' cy='20' r='5' /%3E%3Ccircle cx='50' cy='80' r='5' /%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e9e7c4' fill-opacity='0.3'%3E%3Ccircle cx='50' cy='50' r='5' /%3E%3Ccircle cx='35' cy='35' r='5' /%3E%3Ccircle cx='65' cy='35' r='5' /%3E%3Ccircle cx='35' cy='65' r='5' /%3E%3Ccircle cx='65' cy='65' r='5' /%3E%3Ccircle cx='50' cy='20' r='5' /%3E%3Ccircle cx='50' cy='80' r='5' /%3E%3C/g%3E%3C/svg%3E");
             background-size: 150px 150px;
             background-position: center 20px;
         }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+
+        /* --- TARJETAS --- */
+        .program-card {
+            background-color: white; 
+            border-radius: 0.75rem; 
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+            transition: all 0.3s ease-in-out;
+            display: flex; 
+            flex-direction: column; 
+            height: 100%; 
+            overflow: hidden; 
+            position: relative;
         }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
+        .program-card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1); 
         }
-        .hero-overlay {
-            background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+        .program-icon-wrapper { 
+            width: 3rem; 
+            height: 3rem; 
+            border-radius: 0.5rem; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-bottom: 1rem; 
+        }
+        .btn-details { 
+            display: inline-flex; 
+            align-items: center; 
+            font-weight: 600; 
+            font-size: 0.875rem; 
+            margin-top: auto; 
+            transition: all 0.2s; 
+        }
+        .btn-details svg { 
+            width: 1rem; 
+            height: 1rem; 
+            margin-left: 0.25rem; 
+            transition: transform 0.2s; 
+        }
+        .btn-details:hover svg { 
+            transform: translateX(3px); 
         }
     </style>
 </head>
 <body class="bg-white text-gray-800">
 
+    <!-- HEADER EXACTO (padding py-5, mismas clases) -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 header-scrolled">
         <nav class="container mx-auto px-6 lg:px-8 py-5">
             <div class="flex justify-between items-center">
@@ -177,7 +158,8 @@
             </div>
         </nav>
         
-        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-50 p-6">
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-white z-50 p-6" style="background-color: white;">
             <div class="flex justify-between items-center mb-8">
                 <img src="/wikiemdia foundation logo.webp" 
                      alt="Wikimedia Chile Logo" 
@@ -202,6 +184,7 @@
         </div>
     </header>
 
+    <!-- Modal de Búsqueda -->
     <div id="search-modal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-start justify-center pt-20 md:pt-32 p-4">
         <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl relative" id="search-modal-content">
             <button id="close-search-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600" aria-label="Cerrar búsqueda">
@@ -218,25 +201,18 @@
             </div>
         </div>
     </div>
-    
+
     <main>
-        
-        <section class="relative pt-48 pb-32 text-center text-white overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1600&q=80" 
-                 alt="Taller de Wikimedia Chile en una sala de clases" 
-                 class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/60"></div>
-            <div class="container mx-auto px-4 lg:px-6 relative z-10">
-                <h1 class="text-4xl lg:text-5xl font-extrabold !leading-tight tracking-tight drop-shadow-xl">
-                    Nuestros <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-400">Programas</span>
-                </h1>
-                <p class="mt-6 text-lg text-gray-200 max-w-3xl mx-auto drop-shadow-lg">
-                    Nuestras líneas de acción para impulsar el conocimiento libre y la cultura abierta en Chile.
-                </p>
-            </div>
+        <!-- Sección de Banner -->
+        <section class="relative pt-20 h-[400px] md:h-[450px] flex items-center justify-center bg-gray-100 overflow-hidden">
+            <img src="banner.png" 
+                 alt="Banner Programas" 
+                 class="w-full h-full object-cover object-center" 
+                 onerror="this.src='https://placehold.co/1920x600/eee/999?text=Banner+Programas';">
         </section>
 
-        <div class="py-8 md:py-12">
+        <!-- Breadcrumbs (Redirección home / programas) -->
+        <div class="py-8 md:py-10">
             <div class="container mx-auto px-4 lg:px-6">
                 <nav class="flex justify-center" aria-label="Breadcrumb">
                     <ol role="list" class="flex items-center space-x-2">
@@ -260,105 +236,98 @@
                         </li>
                     </ol>
                 </nav>
-                <div class="flex items-center justify-center space-x-4 max-w-lg mx-auto mt-8">
-                    <div class="h-px flex-grow rounded-full" style="background: linear-gradient(to left, #5748b5, #308557, #0e65c0); opacity: 0.3;"></div>
-                    <div class="flex-shrink-0 flex gap-3 items-center">
-                        <svg class="w-5 h-5" style="color: #0e65c0;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-7 h-7" style="color: #5748b5;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                        <svg class="w-5 h-5" style="color: #308557;" fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L61.2265 38.7735L100 50L61.2265 61.2265L50 100L38.7735 61.2265L0 50L38.7735 38.7735L50 0Z" /></svg>
-                    </div>
-                    <div class="h-px flex-grow rounded-full" style="background: linear-gradient(to right, #5748b5, #308557, #0e65c0); opacity: 0.3;"></div>
-                </div>
             </div>
         </div>
-        
-        <section class="py-16 md:py-24 section-bg-ornament-circles">
+
+        <!-- Contenido Principal de Programas -->
+        <!-- Se ajustó pt-8 para coincidir con el layout de Sobre Nosotros tras el breadcrumb -->
+        <div class="pt-8 pb-16 md:pt-12 md:pb-24 section-bg-ornament-dots"> 
             <div class="container mx-auto px-4 lg:px-6">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <span class="text-base font-bold uppercase" style="color: #5748b5;">Líneas de Acción</span>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-3">Nuestro Foco de Trabajo</h2>
-                    <p class="mt-6 text-xl text-gray-700">
-                        Estos son los cuatro pilares a través de los cuales materializamos nuestra misión de liberar el conocimiento.
+                <div class="text-center mb-12 max-w-3xl mx-auto">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600">NUESTRO TRABAJO</span>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-2 mb-4">Nuestros Programas</h1>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        Conoce las líneas de acción con las que impulsamos el conocimiento libre y la cultura abierta en Chile.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                    
-                    <a href="programas-educacion.html" class="block bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        <div class="p-8">
-                            <div class="flex items-center gap-5 mb-6">
-                                <div class="flex-shrink-0 w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center border-4 border-white shadow-md">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" /></svg>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                    <!-- TAEW -->
+                    <a href="/programas-educacion.html" class="block h-full group">
+                        <article class="program-card border-t-4 border-blue-600 p-6 hover:border-blue-500">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="program-icon-wrapper bg-blue-50 text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
                                 </div>
-                                <div>
-                                    <span class="block text-xs font-bold uppercase text-blue-600 tracking-wider">TAEW</span>
-                                    <h3 class="text-2xl font-bold text-gray-900">Educación y DD.HH.</h3>
-                                </div>
+                                <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">TAEW</span>
                             </div>
-                            <p class="text-gray-700 leading-relaxed text-base">
-                                Integramos las plataformas Wikimedia como herramientas pedagógicas en instituciones educativas de todos los niveles. Realizamos talleres y colaboramos con docentes y estudiantes para reducir la brecha de contenido.
-                            </p>
-                        </div>
+                            <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors leading-tight">Tecnologías Abiertas y Ecosistema Wiki</h2>
+                            <p class="text-sm text-gray-600 mb-4 flex-grow leading-relaxed line-clamp-3">Impulsamos el desarrollo de personas activas en los proyectos Wikimedia, promoviendo herramientas técnicas que mejoren su experiencia.</p>
+                            <div class="btn-details text-blue-600 group-hover:underline">Ver detalles <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></div>
+                        </article>
                     </a>
-
-                    <a href="programas-cultura.html" class="block bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        <div class="p-8">
-                            <div class="flex items-center gap-5 mb-6">
-                                <div class="flex-shrink-0 w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center border-4 border-white shadow-md">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M8.25 21h7.5M12 6v15m0 0v-4.5m0 4.5v-4.5m0 4.5L15 12m-3 9l-3-7.5" /></svg>
+                    <!-- FAED -->
+                    <a href="programas-cultura.html" class="block h-full group">
+                        <article class="program-card border-t-4 border-green-600 p-6 hover:border-green-500">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="program-icon-wrapper bg-green-50 text-green-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" /></svg>
                                 </div>
-                                <div>
-                                    <span class="block text-xs font-bold uppercase text-green-600 tracking-wider">FAED</span>
-                                    <h3 class="text-2xl font-bold text-gray-900">Cultura y Patrimonio</h3>
-                                </div>
+                                <span class="bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">FAED</span>
                             </div>
-                            <p class="text-gray-700 leading-relaxed text-base">
-                                Colaboramos con Galerías, Bibliotecas, Archivos y Museos (GLAM) para digitalizar y liberar sus colecciones, preservando el patrimonio cultural de Chile y haciéndolo accesible en Wikimedia Commons y Wikidata.
-                            </p>
-                        </div>
+                            <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors leading-tight">Formación, Alfabetización y Educación Digital</h2>
+                            <p class="text-sm text-gray-600 mb-4 flex-grow leading-relaxed line-clamp-3">Formamos a docentes y estudiantes para fortalecer habilidades críticas digitales y promover la alfabetización mediática.</p>
+                            <div class="btn-details text-green-600 group-hover:underline">Ver detalles <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></div>
+                        </article>
                     </a>
-
-                    <a href="programas-comunidades.html" class="block bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        <div class="p-8">
-                            <div class="flex items-center gap-5 mb-6">
-                                <div class="flex-shrink-0 w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center border-4 border-white shadow-md">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-4.682 2.72a3 3 0 01-4.682-2.72 9.094 9.094 0 013.741.479m-3.741-.479a9.094 9.094 0 00-3.741.479 3 3 0 004.682 2.72M12 12.75a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    <!-- TECOLO -->
+                    <a href="/programas-comunidades.html" class="block h-full group">
+                        <article class="program-card border-t-4 border-purple-600 p-6 hover:border-purple-500">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="program-icon-wrapper bg-purple-50 text-purple-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
                                 </div>
-                                <div>
-                                    <span class="block text-xs font-bold uppercase text-purple-600 tracking-wider">TECOLO</span>
-                                    <h3 class="text-2xl font-bold text-gray-900">Comunidades</h3>
-                                </div>
+                                <span class="bg-purple-50 text-purple-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">TECOLO</span>
                             </div>
-                            <p class="text-gray-700 leading-relaxed text-base">
-                                El corazón del movimiento. Apoyamos, reclutamos y fortalecemos a las diversas comunidades de voluntarios, editores y fotógrafos en Chile, organizando editatones y proveyendo recursos para sus iniciativas.
-                            </p>
-                        </div>
+                            <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors leading-tight">Territorios y Contenidos Locales</h2>
+                            <p class="text-sm text-gray-600 mb-4 flex-grow leading-relaxed line-clamp-3">Trabajamos con comunidades para enriquecer el contenido sobre Chile, descentralizando el conocimiento.</p>
+                            <div class="btn-details text-purple-600 group-hover:underline">Ver detalles <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></div>
+                        </article>
                     </a>
-
-                    <a href="programas-incidencia.html" class="block bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        <div class="p-8">
-                            <div class="flex items-center gap-5 mb-6">
-                                <div class="flex-shrink-0 w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center border-4 border-white shadow-md">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
+                    <!-- APPA -->
+                    <a href="/programas-incidencia.html" class="block h-full group">
+                        <article class="program-card border-t-4 border-red-600 p-6 hover:border-red-500">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="program-icon-wrapper bg-red-50 text-red-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
                                 </div>
-                                <div>
-                                    <span class="block text-xs font-bold uppercase text-red-600 tracking-wider">APPA</span>
-                                    <h3 class="text-2xl font-bold text-gray-900">Incidencia y Políticas Abiertas</h3>
-                                </div>
+                                <span class="bg-red-50 text-red-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">APPA</span>
                             </div>
-                            <p class="text-gray-700 leading-relaxed text-base">
-                                Defendemos activamente el conocimiento libre en el ámbito público y legal. Trabajamos para modernizar las leyes de derecho de autor, proteger el dominio público y asegurar un ecosistema digital abierto y justo.
-                            </p>
-                        </div>
+                            <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-700 transition-colors leading-tight">Incidencia y Políticas Abiertas</h2>
+                            <p class="text-sm text-gray-600 mb-4 flex-grow leading-relaxed line-clamp-3">Incidimos en políticas públicas para fortalecer el acceso abierto y el conocimiento libre.</p>
+                            <div class="btn-details text-red-600 group-hover:underline">Ver detalles <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></div>
+                        </article>
                     </a>
-
+                    <!-- COALCO -->
+                    <a href="/programas-comunicaciones.html" class="block h-full group">
+                        <article class="program-card border-t-4 border-teal-600 p-6 hover:border-teal-500">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="program-icon-wrapper bg-teal-50 text-teal-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.996.912 2.168 1.92 3.186a6.52 6.52 0 0010.443-3.835l.336-1.585m-12.698 2.234c.253-1.004.912-2.177 1.92-3.186a6.52 6.52 0 0110.443 3.835l.336 1.585m-12.698-2.235L3.86 17.15a2.25 2.25 0 01-2.227-1.37 4.483 4.483 0 011.666-4.83l1.557-1.001a2.25 2.25 0 012.532.305l1.513 1.236a4.45 4.45 0 011.535 4.329z" /></svg>
+                                </div>
+                                <span class="bg-teal-50 text-teal-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">COALCO</span>
+                            </div>
+                            <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-teal-700 transition-colors leading-tight">Comunicaciones, Alianzas y Comunidad</h2>
+                            <p class="text-sm text-gray-600 mb-4 flex-grow leading-relaxed line-clamp-3">Fortalecemos el vínculo con nuestra comunidad, atraemos nuevos voluntarios y posicionamos a Wikimedia Chile.</p>
+                            <div class="btn-details text-teal-600 group-hover:underline">Ver detalles <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></div>
+                        </article>
+                    </a>
                 </div>
-
             </div>
-        </section>
-        
+        </div>
     </main>
-    
+
+    <!-- FOOTER UNIFICADO -->
     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
         <div class="container mx-auto px-4 lg:px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -367,7 +336,7 @@
                     <div class="flex items-center gap-2 mb-4">
                         <img src="/wikimedia chile logo.png" 
                              alt="Wikimedia Chile Logo" 
-                             class="h-9 w-auto bg-white p-1 rounded-sm"
+                             class="h-9 w-auto"
                              onerror="this.onerror=null;this.src='https://placehold.co/120x36/fff/333?text=WM+Chile';">
                     </div>
                     <p class="text-sm text-gray-400 leading-relaxed">
@@ -451,6 +420,7 @@
             const header = document.getElementById('main-header');
             const headerLogo = document.getElementById('header-logo');
 
+            // Esta página siempre tiene el header "scrolled" para mantener fondo blanco
             if (header) {
                 header.classList.add('header-scrolled');
                 if(headerLogo) {
@@ -458,6 +428,7 @@
                 }
             }
 
+            // Lógica para el menú móvil
             if (mobileMenuButton && mobileMenu && closeMobileMenuButton) {
                 mobileMenuButton.addEventListener('click', () => {
                     mobileMenu.classList.remove('hidden');
@@ -468,6 +439,7 @@
                 });
             }
             
+            // Lógica para el modal de búsqueda
             if (searchModal && closeSearchButton && openSearchButtons.length > 0) {
                 
                 function openSearch() {
@@ -497,7 +469,6 @@
                     }
                 });
             }
-
         });
     </script>
 
